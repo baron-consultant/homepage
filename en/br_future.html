@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- /assets -->
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/font.css" />
+    <link rel="stylesheet" href="../assets/css/lib/aos.min.css" />
+    <link rel="stylesheet" href="../assets/css/lib/lenis.min.css" />
+    <script src="../assets/js/lib/aos.min.js"></script>
+    <script src="../assets/js/lib/lenis.min.js"></script>
+    <script src="../assets/js/lib/jquery-3.6.1.min.js"></script>
+    <script src="../assets/js/lib/gsap.min.js"></script>
+    <script src="../assets/js/lib/scrolltrigger.min.js"></script>
+    <script src="../assets/js/lib/scrollToPlugin.min.js"></script>
+    <!-- CSS / JS -->
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/eng/common.css" />
+    <link rel="stylesheet" href="../assets/css/eng/baron.css" />
+    <script type="module" src="../assets/js/eng/common.js"></script>
+    <script src="../assets/js/br.js"></script>
+  
+    <!--영문작업중 스타일 수정-->
+    <style>
+        .br.future section.sub1 .imgs_wrap > div.cut4 span:nth-child(1){translate: 330% -100%;}
+        .br.future section.sub1 .imgs_wrap > div.cut4 span:nth-child(2){translate: 390% -120%;}
+        .br.future section.sub1 .imgs_wrap > div.cut4 span:nth-child(3){translate: 270% -90%;}
+        .br.future section.sub1 .imgs_wrap > div.cut4 span:nth-child(4){translate: 540% -60%;}
+        .br.future section.sub2 .process .tit{text-align: left;}
+        .br.future section.sub2 .process ul{left: 49%;}
+        .br.future section.sub2 .process ul li:first-child{margin-left: -190px;}
+        .br.future section.sub2 .process ul li:last-child{margin-left: -280px;}
+        .br.future section.sub2 .product .tit{text-align: left;}
+        .br.future section.sub2 .product ul li div{display: inline-block; vertical-align: middle;}
+        .br.future section.sub2 .product ul{top: 50%;}
+
+
+    </style>
+
+</head>
+  <body>
+    <div class="wrap">
+      <header id="header"></header>
+      <ul class="map_list"></ul>
+      <div class="container br future">
+        <!-- S : intro -->
+        <section class="intro">
+          <div class="video_bg">
+            <video
+              src="../assets/img/br/future_intro_bg.mp4"
+              playsinline
+              muted
+              autoplay
+              loop
+            ></video>
+          </div>
+          <div class="txt_box" data-aos="fade-down" data-aos-duration="1000">
+            <p class="eng_txt">Total Solution Partner</p>
+            <p class="main_txt">
+              Total Solution Partner for Digital Transformation
+            </p>
+            <p class="sub_txt">
+                To achieve digital transformation in the construction industry,<br class="pc_br"/>
+                We provide customized, total solutions based on our expertise in the construction field and digital technology.              
+            </p>
+          </div>
+          <div class="scroll_box">
+            <span>Scroll</span>
+            <div></div>
+          </div>
+        </section>
+        <!-- E : intro -->
+        <!-- S : sub1 -->
+        <section class="sub1">
+          <picture>
+            <source
+              media="(max-width:1400px)"
+              srcset="../assets/img/br/future_sub1_m_bg.png"
+            />
+            <source
+              media="(min-width: 1401px)"
+              srcset="../assets/img/br/future_sub1_bg.png"
+            />
+            <img class="bg" src="../assets/img/br/future_sub1_bg.png" alt="" />
+          </picture>
+
+          <div
+            class="txt_box dark"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
+            <p class="eng_txt">Toward the Digital Transformation</p>
+            <p class="main_txt">
+              The Construction Industry's<br /> Journey to Digital Transformation
+            </p>
+            <p class="sub_txt">
+              To achieve a sustainable construction industry, <br>
+                We are leading the digital transformation of infrastructure lifecycle technologies.
+            </p>
+          </div>
+          <div class="imgs_wrap">
+            <div class="cut1"></div>
+            <div class="cut2"></div>
+            <div class="cut3"></div>
+            <div class="cut4">
+              <div>
+                <span style="translate: 330% -100%;"><i></i>Rendering <br class="m_br">model</span>
+                <span style="translate: 390% -120%;"><i></i>Surface <br class="m_br">model</span>
+                <span style="translate: 270% -90%;"><i></i>Triangular mesh <br class="m_br">model</span>
+                <span style="translate: 540% -60%;"><i></i>Soil <br class="m_br">model</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- E : sub1 -->
+        <!-- S : sub2 -->
+        <section class="sub2">
+          <div class="txt_box dark">
+            <p class="eng_txt">  Redefine through the Digital Transformation</p>
+            <p class="main_txt">
+              Digital transformation is revolutionizing<br class="pc_br"/>the construction industry.
+            </p>
+          </div>
+          <object
+            class="center_line js__ver_line"
+            type="image/svg+xml"
+            data="../assets/img/br/future_sub2_line.svg"
+          ></object>
+          <div class="content process">
+            <div class="img_box">
+              <img class="bg" src="../assets/img/br/future_sub2_process_bg.png" />
+              <img
+                class="point"
+                src="../assets/img/br/future_sub2_process_point.png"
+              />
+            </div>
+
+            <div class="txt_box">
+              <span class="tit">Process<br>Innovation</span>
+              <div class="line"></div>
+              <ul>
+                <li>Digital transformation of analog-based work</li>
+                <li>Innovation in the process of using location-based 3D models</li>
+                <li>User-centric solutions and software</li>
+              </ul>
+            </div>
+          </div>
+          <div class="content product">
+            <div class="img_box">
+              <img class="bg" src="../assets/img/br/future_sub2_product_bg.png" />
+              <img
+                class="point"
+                src="../assets/img/br/future_sub2_product_point.png"
+              />
+            </div>
+
+            <div class="txt_box">
+              <span class="tit">Product<br>Innovation</span>
+              <div class="line"></div>
+              <ul>
+                <li><div>Improving the quality of existing products<br class="pc_br">
+                    that have been standardized due to copy and paste</div></li>
+                <li><div>In addition to analog books,<br class="pc_br">
+                    digital information materials are also added</div></li>
+                <li><div>Improving work efficiency using solutions</div></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <!-- E : sub2 -->
+        <div class="hori_scroll_wrap">
+          <!-- S : sub3 -->
+          <section class="sub3">
+            <div class="inner js__hori_scroll">
+              <!-- !! SVG를 inline으로 넣어야 동작합니다 -->
+              <!-- <svg
+              class="center_line js__hori_line"
+              viewBox="0 0 10000 2400"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <linearGradient
+                  id="lineGradient"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="0%"
+                >
+                  <stop offset="0%" stop-color="#00F2FF" />
+                  <stop offset="100%" stop-color="#1500FF" />
+                </linearGradient>
+              </defs>
+             <path
+                class="st0"
+                d="M25,1177.8s517,418.4,1075.4,418.4,1136.4-824.9,1880.2-824.9,742.7,528.1,1794.5,528.1S6113.4,107,6882.6,107s1098.3,1562.4,2104.6,1562.4,987.7-469.2,987.7-469.2"
+              />
+            </svg> -->
+              <svg
+                class="center_line js__hori_line"
+                viewBox="0 0 6402 650"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <linearGradient
+                    id="lineGradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="0%"
+                  >
+                    <stop offset="0%" stop-color="#00F2FF" stop-opacity="0" />
+                    <stop offset="4%" stop-color="#00F2FF" stop-opacity="1" />
+                    <stop offset="96%" stop-color="#1500FF" stop-opacity="1" />
+                    <stop offset="100%" stop-color="#1500FF" stop-opacity="0" />
+                  </linearGradient>
+                </defs>
+
+                <path
+                  d="M1 384.315C1 384.315 261.952 584.497 626.975 582.063C1154.3 578.548 1267.99 152.594 1832.65 152.594C2355.16 152.594 2507.65 525.408 3029.1 537.102C3458.68 546.736 3891.79 1 4409.78 1C4927.77 1 5149.31 582.063 5788.82 619.19C6197.96 642.942 6401 425.119 6401 425.119"
+                  stroke="black"
+                />
+              </svg>
+              <div class="txt_box dark">
+                <p class="eng_txt">With Our Solution, Making Visions Real</p>
+                <p class="main_txt">Experience innovation<br>through solutions</p>
+              </div>
+              <div class="contents_wrap">
+                <ul>
+                  <li>
+                    <img src="../assets/img/br/future_sub3_easy.jpg" />
+                    <div>
+                      <span><em>Easy Like Breath</em>Easy to Understand</span>
+                      <p>
+                        We provide deliverables that are easily understandable to all users,<br />
+                        from clients to engineers.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="../assets/img/br/future_sub3_convenient.jpg" />
+                    <div>
+                      <span><em>Convenient Intuition</em>Intuitive Usability</span>
+                      <p>
+                        All provided solutions are delivered<br />
+                        in a way that users can understand and use intuitively.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="../assets/img/br/future_sub3_quality.jpg" />
+                    <div>
+                      <span><em>Ultra High Quality</em>High Quality</span>
+                      <p>
+                        We produce high-quality products based <br />on engineering expertise and advanced technology.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="../assets/img/br/future_sub3_cost.jpg" />
+                    <div>
+                      <span><em>Super Low Cost</em>Low Cost</span>
+                      <p>
+                        We produce ultra-low-cost results through process innovation  <br />and maximizing resource utilization.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="../assets/img/br/future_sub3_fast.jpg" />
+                    <div>
+                      <span><em>As Fast As Lightning</em>Super Short</span>
+                      <p>
+                        We quickly deliver high-quality results <br />in a variety of formats that meet user needs.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <p>
+                        We offer diverse information and an optimal total solution so that<br class="pc_br" />
+                        all users - owners, contractors, and engineers - can<br class="pc_br" />
+                        <em>easily access and utilize</em> phase data and <em>achieve practical benefits.</em>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <!-- E : sub3 -->
+          <div class="progress_wrap">
+            <ul class="progress_box">
+              <li>
+                <div class="progress_bar"></div>
+                <!--progress max="100" value="0"></progress -->
+                <button class="btn_progress" type="button"></button>
+              </li>
+              <li>
+                <div class="progress_bar"></div>
+                <button class="btn_progress" type="button"></button>
+                <div class="tit_box">
+                  <span>Easy Like Breath</span>
+                  <p>Easy to Understand</p>
+                </div>
+              </li>
+              <li>
+                <div class="progress_bar"></div>
+                <button class="btn_progress" type="button"></button>
+                <div class="tit_box">
+                  <span>Convenient Intuition</span>
+                  <p>Intuitive Usability</p>
+                </div>
+              </li>
+              <li>
+                <div class="progress_bar"></div>
+                <button class="btn_progress" type="button"></button>
+                <div class="tit_box">
+                  <span>Ultra High Quality</span>
+                  <p>High Quality</p>
+                </div>
+              </li>
+              <li>
+                <div class="progress_bar"></div>
+                <button class="btn_progress" type="button"></button>
+                <div class="tit_box">
+                  <span>Super Low Cost</span>
+                  <p>Low Cost</p>
+                </div>
+              </li>
+              <li>
+                <div class="progress_bar"></div>
+                <button class="btn_progress" type="button"></button>
+                <div class="tit_box">
+                  <span>As Fast As Lightning</span>
+                  <p>Super Short</p>
+                </div>
+              </li>
+              <li>
+                <button class="btn_progress" type="button"></button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <footer id="footer"></footer>
+    </div>
+  </body>
+</html>

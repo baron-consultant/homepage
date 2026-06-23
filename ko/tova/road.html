@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YWLEP3YXQ8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-YWLEP3YXQ8');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공로분석</title>
+    <link rel="stylesheet" href="./css/reset.css"/>
+    <link rel="stylesheet" href="./css/font.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" type="text/css"/>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script> 
+	<link rel="stylesheet" href="https://unpkg.com/lenis@1.1.9/dist/lenis.css">
+    <script type="text/javascript" src="./js/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.mousewheel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+    <script type="text/javascript" src="./js/common.js?v=20260623h"></script>
+    <script type="text/javascript" src="./js/popup.js"></script>
+    <script type="text/javascript" src="./js/road.js"></script>
+</head>
+<body>
+    <!-- "js__"로 시작하는 클래스는 only 자바스크립트용입니다. -->
+     <!-- XXXX js__넣어서 css 작성 금지 XXXX -->
+     <div class="wrapper">
+        <!-- Header -->
+<!-- Header -->
+            <header class="js__header"></header>
+            <!-- //Header -->
+
+		<!-- //Header -->
+         
+        <!-- 모든 팝업페이지 경로 -->            
+            
+         <!-- 컨텐츠 시작 -->
+		 <div class="container road">
+                <section class="intro">
+                    <div class="top js__dark">
+                        <h2 data-aos="fade-down" data-aos-duration="1000">공로 분석</h2>
+                        <span>도로교통 시스템의 수요와 성능 평가 및 분석</span>
+                    </div>
+                    <div class="keyword">
+                        <i class="tova_obj k"></i>
+                        <span>안정적, 신뢰성, 완벽한</span>
+                        <p>TOVA는 안정적이고 신뢰성 있는 통행배정 결과를 위해<br> Proportionality 조건을 완벽하게 구현합니다.</p>
+                    </div>
+                    <div class="condition">
+                        <div class="diagram_wrap" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="dia_element">
+                                <i></i>
+                                <span class="dia_tit">Proportionality<br>조건 충족 여부</span>
+                                <div class="line"></div>
+                            </div>
+                            <div class="dia_circles_wrap">
+                                <div class="circle_dash"></div>
+                                <div class="circle_belt"></div>
+                                <div class="circle_core">
+                                    <span>통행배정 분석</span>
+                                    <span>신뢰성</span>
+                                </div>
+                                <div class="circle_dots move">
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                </div>
+                                <div class="circle_dots">
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                </div>
+                            </div>
+                            <div class="dia_element">
+                                <i></i>
+                                <span class="dia_tit">모형의 정확도</span>
+                                <div class="line"></div>
+                            </div>
+                        </div>
+                        <p>공로 통행배정 분석결과의 신뢰성은 모형의 정확도와 함께<br> <b>Proportionality 조건 충족 여부에 따라 달라집니다.</b></p>
+                    </div>
+                </section>
+                <section class="theorys js__dark full_screen">
+                    <span class="mid_tit" data-aos="fade-down" data-aos-duration="1000"><font class="tova w">TOVA</font>는 Proportionality 조건을 <br class="brk">완벽하게 충족하기 위해<br><font class="assign"> Balancing Process</font>와 <br class="brk"><font class="warm">Warm-Start</font> 기능을 적용합니다.</span>
+                    <div class="diagram_wrap">
+                        <div class="dia_elements_wrap">
+                            <div class="dia_element">
+                                <ul class="dia_text">
+                                    <li>전량배분법<br class="brk"><small>(All-or-Nothing Assignment)</small></li>
+                                    <li>분할배분법<br class="brk"><small>(Incremental Assignment)</small></li>
+                                    <li>평행배분법<br class="brk"><small>(Equilibrium Assignment)</small></li>
+                                </ul>
+                                <div class="line"></div>
+                            </div>
+                            <div class="dia_element">
+                                <ul class="dia_text">
+                                    <li>Frank-Wolfe Algorithm</li>
+                                    <li>Steepest Origin-Based <br class="brk">Algorithm<small>(SOBA)</small></li>
+                                </ul>
+                                <div class="line"></div>
+                            </div>
+                        </div>
+                        <div class="dia_circles_wrap">
+                            <div class="circle_modal">
+                                <div class="circle_belt"></div>
+                                <div class="circle_core">
+                                    <span>통행배정<br>모형</span>
+                                    <i></i>
+                                </div>
+                                <div class="circle_dots move">
+                                    <div class="dot"></div>
+                                </div>
+                                <div class="circle_dots">
+                                    <div class="dot"></div>
+                                </div>
+                            </div>
+                            <div class="circle_algo">
+                                <div class="circle_belt"></div>
+                                <div class="circle_core">
+                                    <span>균형배정<br>알고리즘</span>
+                                    <i></i>
+                                </div>
+                                <div class="circle_dots move">
+                                    <div class="dot"></div>
+                                </div>
+                                <div class="circle_dots">
+                                    <div class="dot"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="circle_warm">Warm-Start</div>
+                </section>
+                <section class="layout_fix_left process">
+                    <div class="left" data-aos="fade-right" data-aos-duration="1000">
+                        <div class="bg js__fixLeft_bg on"></div>
+                        <div class="bg js__fixLeft_bg"></div>
+                        <span class="mid_tit js__fixLeft_tit on"><em>SOBA</em>를 적용하여 <br>모형의 <t class="t1">정확도</t>를 <br class="brk">높이고 <br><t class="t2">최적 수렴값</t>을 구하며,</span>
+                        <span class="mid_tit js__fixLeft_tit"><em>Warm-Start 기능</em>을 구현해 <br><br class="brk"><em>Frog-Jump 현상</em>을 제거</span>
+                    </div>
+                    <div class="right">
+                        <div class="soba js__fixLeft_sec">
+                            <span class="sub_tit">SOBA(Steepest Origin-Based Algorithm) 적용</span>
+                            <div class="sub_text">
+                                <ul>
+                                    <li>기존 소프트웨어와 비교하여 정확도와 처리속도가 크게 향상</li>
+                                    <li>분석시간 단축으로 인한 교통수요 분석 업무의 효율성 향상</li>
+                                    <li>분석 단계별 맞춤형 편집 및 편리한 수정 기능 제공</li>
+                                    <li>Bush File기반의 효율적이고 다양한 경로분석 기능 제공</li>
+                                </ul>
+                            </div>
+                            <div class="sub_figs">
+                                <div class="fig_box">
+                                    <img src="./img/road_process_soba.svg">
+                                    <div class="fig_tit">수도권 자료를 이용한 도로통행배정 S/W간 성능(수행시간 및 정밀성) 비교</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mid_tit m" style="display: none;">Warm-Start 기능을 구현해 <br>Frog-Jump 현상을 제거</div>
+                        <div class="warmStart js__fixLeft_sec">
+                            <span class="sub_tit">웜 스타트(Warm-Start) 구현</span>
+                            <div class="sub_text">
+                                <ul>
+                                    <li>사전 수행된 임의의 통행배정 결과를 초기치로 활용해 수행속도 향상</li>
+                                    <li>안정적인 통행배정 결과를 얻을 수 있는 기능을 통해 사업시행에 따른  장래 연도별 편익의 안전성을 보장</li>
+                                </ul>
+                            </div>
+                            <div class="sub_figs">
+                                <div class="fig_box">
+                                    <img src="./img/road_process_warm_fig1.svg">
+                                    <div class="fig_tit">TOVA의 Warm-Start와 Cold-Start의 수행시간 비교 결과</div>
+                                </div>
+                                <div class="fig_box">
+                                    <img src="./img/road_process_warm_fig2.svg">
+                                    <div class="fig_tit">국내 도로투자사업에 대한 이용 S/W별 편익 산출 결과 비교</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frogJump">
+                            <span class="sub_tit">개구리 뛰기 현상(Frog-Jump) 제거</span>
+                            <div class="sub_text">
+                                <ul>
+                                    <li>도로사업으로 인한 교통량 변화가 사업지역과 무관한 곳에서 비상식적으로 발생하는 현상</li>
+                                    <li>모형 정밀성 부족 및 비례성 조건 미충족 시 발생하여 불안정한 편익 산출의 주요 원인</li>
+                                </ul>
+                                <span>TOVA는 모델의 정밀성을 확보함으로써 웜스타트 기능을 구현하고 Frog Jump 현상을 제거하여 <em>불규칙적인 통행량 변화 최소화로 이를 통해 정밀한 통행 배정 분석의 효과</em>를 얻을 수 있습니다.</span>
+                            </div>
+                            <div class="sub_figs">
+                                <p><span>증가</span><span>감소</span></p>
+                                <div class="fig_box frog1">
+                                    <img src="./img/road_frog1.jpg">
+                                    <div class="fig_tit">Frank-Wolfe (Relative-gap : 10⁻¹⁴ 수렴)</div>
+                                </div>
+                                <div class="fig_box frog2">
+                                    <img src="./img/road_frog2.jpg">
+                                    <div class="fig_tit">SOBA (Relative-gap : 10⁻¹² 수렴)</div>
+                                </div>
+                                <object data="./img/road_frog_markup.svg" class="markup"></object>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="proportionality">
+                    <span class="mid_tit" data-aos="fade-down" data-aos-duration="1000">Proportionality 조건 미충족시 <br><em>차종별 교통량 예측 & 편익 분석 결과의 <br class="brk">신뢰성이 크게 저하</em>됩니다.</span>
+                    <div class="sub_text">
+                        <span><em>모든 기·종점, 차종간 대안구간<small> (PAS : Pair of Alternative Segments)</small>의 경로간 통행량 비율은 항상 동일해야 합니다.</em></span>
+                        <p>Proportionality가 구현되지 않을 경우, 다차종 통행배정 수행 시 특정경로에 특정 차종이 과도하게 집중되는 현상이 발생할 수 있습니다. <br>이는 <em>Frog-Jump 현상 발생의 원인</em>이 되고, 교통수요분석 및 도로투자 평가 시 차종별 교통량 예측 & 편익 분석 결과의 신뢰성을 크게 저하시킵니다.</p>
+                    </div>
+                    <div class="sub_figs">
+                        <div class="fig_box">
+                            <object data="./img/road_proportionality_fig1.svg"></object>
+                            <div class="fig_tit">PAS(Lake Shore Drive, Chicago)</div>
+                        </div>
+                        <div class="fig_box">
+                            <object data="./img/road_proportionality_fig2.svg"></object>
+                            <div class="fig_tit">TOVA Proportionality 구현 결과</div>
+                        </div>
+                    </div>
+                </section>
+                <section class="conclusion js__height_trigger js__dark full_screen">
+                    <div class="full_bg js__height_item"></div>
+                    <span class="mid_tit js__height_text1">따라서,</span>
+                    <span class="mid_tit js__height_text2"><em class="m">따라서,</em> <i class="tova"></i><em>를 이용한 <br class="brk">통행배정 분석</em>에는<br>사업지역과 관련된 <br class="brk">영향권을 설정할 필요가 없습니다.</span>
+                </section>
+            </div>
+        <!-- FOOTER -->
+        <footer id="footer"></footer>
+        <!-- //FOOTER -->
+    </div>
+    <script>
+        AOS.init();
+
+		const lenis = new Lenis()
+		lenis.on('scroll', (e) => {
+			// console.log(e)
+		})
+		lenis.on('scroll', ScrollTrigger.update)
+		gsap.ticker.add((time)=>{
+			lenis.raf(time * 1000)
+		})
+		gsap.ticker.lagSmoothing(0)
+    </script>
+</body>
+</html>
+
+
+

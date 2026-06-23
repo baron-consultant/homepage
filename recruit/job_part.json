@@ -1,0 +1,53 @@
+[
+  {
+    "name": "엔지니어",
+    "enName": "Engineering",
+    "id": "engineer",
+    "partList": [
+      ["상하수도", "waterSS"],
+      ["수자원", "waterRsc"],
+      ["수력", "hydroPower"],
+      ["국토개발", "landDev"],
+      ["조경", "landScape"],
+      ["도로", "roads"],
+      ["교통", "transport"],
+      ["구조", "structure"],
+      ["지반", "ground"],
+      ["터널", "tunnel"],
+      ["항만", "port"],
+      ["환경평가", "envEvl"],
+      ["플랜트", "plant"],
+      ["환경", "environment"]
+    ]
+  },
+  {
+    "name": "개발자",
+    "enName": "Tech",
+    "id": "developer",
+    "partList": [
+      ["WEB개발", "web"],
+      ["S/W개발", "sw"],
+      ["그래픽스 개발", "graphics"]
+    ]
+  },
+  {
+    "name": "디자이너",
+    "enName": "Design",
+    "id": "designer",
+    "partList": [
+      ["3D영상디자이너", "3d"],
+      ["편집디자이너", "layout"],
+      ["UX/UI디자이너", "uxui"]
+    ]
+  },
+  {
+    "name": "기획&관리",
+    "enName": "Corporate",
+    "id": "management",
+    "partList": [
+      ["인사/총무", "personnel"],
+      ["재무/회계", "finance"],
+      ["사업관리", "business"]
+    ]
+  }
+]

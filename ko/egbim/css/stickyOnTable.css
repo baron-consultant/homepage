@@ -1,0 +1,10 @@
+.sot{overflow: auto; box-sizing: border-box; padding: 0;}
+.sot > table{table-layout: fixed; position: relative; border-collapse: separate !important; border-spacing: 0; padding: 0; margin: 0; width:100%; border-width:0px; overflow: visible;}
+
+.sot-top{position: sticky; top:0; z-index: 20;}
+.sot-left {position: sticky; left: 0; z-index: 10;}
+.sot-bottom {position: sticky; bottom:0; z-index: 20;}
+.sot-right {position: sticky; right: 0; z-index: 10;}
+
+.sot-top.sot-left {z-index: 30;}
+

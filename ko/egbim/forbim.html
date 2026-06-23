@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for BIM</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/font.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" type="text/css"/>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.9/dist/lenis.css">
+    <script type="text/javascript" src="js/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+
+    <script type="text/javascript" src="js/common.js?v=20260623h"></script>
+    <script type="text/javascript" src="js/forbim.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+<div class="container forbim">
+      <section class="intro">
+        <div class="top js__dark">
+          <h2 data-aos="fade-down" data-aos-duration="1000">for BIM</h2>
+          <span>디지털전환시대, 도면과 BIM모델을 동시에 본다</span>
+        </div>
+        <div class="keyword">
+          <i class="egbim_obj k"></i>
+          <span>
+            더블클릭 한번으로<br>
+            도면과 함께 3D BIM모델을 볼 수 있습니다
+          </span>
+          <p>EG-BIM은 도면만으로 확인하기 어려운 많은 설계정보를 <br>
+            3D Viewer 를 통하여 BIM모델과 함께 쉽게 확인할 수 있는 기능을 제공합니다.</p>
+        </div>
+        <div class="visual" data-aos="fade-up" data-aos-duration="1000">
+          <img src="img/forbim_visaul.png" alt="">
+        </div>
+      </section>
+
+      <section class="theorys js__dark full_screen">
+        <span class="mid_tit" data-aos="fade-down" data-aos-duration="1000">
+          “ <b class="gr_txt">BIM모델 정보</b>와 <b class="og_txt">도면</b>의<br class="brk"> CROSS CHECK ”
+        </span>
+        <div class="diagram_wrap" data-aos="fade-up" data-aos-duration="1000">
+          <div class="dia_elements_wrap">
+            <div class="dia_element">
+              <ul class="dia_text">
+                <li>위치정보</li>
+                <li>형상정보</li>
+                <li>수량정보</li>
+              </ul>
+              <div class="line"></div>
+            </div>
+            <div class="dia_element">
+              <ul class="dia_text">
+                <li>종평면도</li>
+                <li>일반도</li>
+                <li>상세도</li>
+              </ul>
+              <div class="line"></div>
+            </div>
+          </div>
+          <div class="dia_circles_wrap">
+            <div class="circle_bim">
+              <div class="circle_belt"></div>
+              <div class="circle_core">
+                <span>BIM 모델</span>
+                <i></i>
+              </div>
+              <div class="circle_dots move">
+                <div class="dot"></div>
+              </div>
+              <div class="circle_dots">
+                <div class="dot"></div>
+              </div>
+            </div>
+            <div class="circle_floorplan">
+              <div class="circle_belt"></div>
+              <div class="circle_core">
+                <span>도면</span>
+                <i></i>
+              </div>
+              <div class="circle_dots move">
+                <div class="dot"></div>
+              </div>
+              <div class="circle_dots">
+                <div class="dot"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="layout_fix_left process">
+        <div class="left" data-aos="fade-right" data-aos-duration="1000">
+          <div class="bg js__fixLeft_bg on"></div>
+          <div class="bg js__fixLeft_bg"></div>
+          <span class="mid_tit js__fixLeft_tit on">
+            <font class="num">01. </font>도면과 BIM<br> <em>동시보기</em>
+          </span>
+          <span class="mid_tit js__fixLeft_tit">
+            <font class="num">02. </font><em>BIM모델<br> </em>상세보기</em>
+          </span>
+        </div>
+        <div class="right js__fixLeft_secs">
+          <span class="mid_tit m" style="display:none;">
+            <font class="num">01. </font>도면과 BIM 동시보기
+          </span>
+          <div id="content1" class="link">
+            <span class="sub_tit">
+              <img src="img/ico_forbim_link.svg" alt="">
+              도면과 BIM모델의 정보연동
+            </span>
+            <div class="sub_text">
+              <b>도면과 BIM모델간의 정보연동</b>으로 <b>선택부재가 실시간 표시</b>되어 도면과 BIM모델을 동시에 보면서 부재의 위치 및 형상정보 등의 속성정보를 확인 할 수 있습니다.
+            </div>
+            <div class="sub_figs">
+              <div class="fig01"><span>도면</span></div>
+              <div class="fig02"><span>BIM 모델</span></div>
+              <div class="fig03"><span>속성정보</span></div>
+              <div class="fig04"><span>선택부재 실시간 표시</span></div>
+            </div>
+          </div>
+          <span class="mid_tit m" style="display:none;">
+            <font class="num">02. </font>BIM모델 상세보기
+          </span>
+          <div id="content2" class="info">
+            <span class="sub_tit">
+              <img src="img/ico_forbim_check.svg" alt="">
+              BIM모델의 속성정보 및 형상 확인
+            </span>
+            <div class="sub_text">
+              <span>
+                3D Viewer의 다양한 시각적인 기능을 통해 <b>모델의 형상과 각 부재의 간섭관계 등을 상세하게 확인</b> 할 수 있습니다.
+              </span>
+            </div>
+            <div class="sub_figs">
+              <div><span>부재별 속성정보 표시, 부재별 레이어 On/Off, Clipping, 투명도 적용, 스케일 조정 등</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    </div>
+    <script>
+        AOS.init();
+
+        const lenis = new Lenis();
+        lenis.on('scroll', (e) => {
+            // console.log(e)
+        });
+        lenis.on('scroll', ScrollTrigger.update);
+        gsap.ticker.add((time) => {
+            lenis.raf(time * 1000);
+        });
+        gsap.ticker.lagSmoothing(0);
+    </script>
+</body>
+</html>

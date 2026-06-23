@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구매하기</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/font.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" type="text/css"/>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.9/dist/lenis.css">
+    <script type="text/javascript" src="js/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+
+	<script type="text/javascript" src="js/common.js?v=20260623h"></script>
+    <script type="text/javascript" src="js/buy.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+<div class="container buy">
+			<section class="intro">
+				<div class="top js__dark">
+					<h2 data-aos="fade-down" data-aos-duration="1000">구매하기</h2>
+					<span>EG-BIM 구매문의 및 제품 안내</span>
+				</div>
+			</section>
+			<section class="contents_wrap">
+				
+				<div class="ask_area">
+					<div class="ask_l">
+						<span class="mid_tit"><font class="egbim k">EG-BIM S/W</font>으로<br><b>신개념 S/W</b> 직접 경험하세요</span>
+					</div>
+					<div class="ask_r">
+						<span class="sub_text"><em>라이선스 중복 시  <font style="color: var(--color-orange)">이용이 제한</font></em>될 수 있습니다.</span>
+						<div class="ask_btn">
+							<a href="#" onclick="alert('Contact board is coming soon.'); return false;" class="btn_ask" ><i></i>EG-BIM 구매 문의</a>
+                            <!-- <a href="#" onclick="alert('문의 게시판은 준비중입니다.'); return false;" class="btn_ask" ><i></i>EG-BIM 구매 문의</a> -->
+							<a href="download/EGBIM_leaflet_v01.pdf" download class="btn_brochure"><i></i>브로슈어</a>
+							<a href="download/EGBIM_manual.pdf" download class="btn_manual"><i></i>매뉴얼</a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="video_area" data-aos="fade-right" data-aos-duration="1000">
+					<div class="vod_wrap"><video autoplay muted loop playsinline><source src="img/EGBIM_buy.mp4"></video></div>
+					<div class="contact_area">
+						<p>
+							<span class="mid_tit">구매 상담</span>
+							<span class="sub_text">EG-BIM 담당자에게 직접 문의하기</span>
+						</p>
+						<div class="line"></div>
+						<ul>
+							<li class="tel"><i></i><a href="tel:0214147434">02 - 2141 - 7434</a></li>
+							<li class="mail"><i></i>baroncs@baroncs.co.kr</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</div>
+    </div>
+    <script>
+        AOS.init();
+
+        const lenis = new Lenis();
+        lenis.on('scroll', (e) => {
+            // console.log(e)
+        });
+        lenis.on('scroll', ScrollTrigger.update);
+        gsap.ticker.add((time) => {
+            lenis.raf(time * 1000);
+        });
+        gsap.ticker.lagSmoothing(0);
+    </script>
+</body>
+</html>

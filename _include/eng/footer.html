@@ -1,0 +1,128 @@
+<!--영문화-->
+<style>
+footer .footer_inner .footer_info .home{background-image: url(../assets/img/eng/logo_w.svg);}
+footer .footer_inner .footer_info span{font-size: 15px;}
+</style>
+<div class="footer_inner">
+  <nav class="nav"></nav>
+  <div class="family_wrap">
+    <div class="family_btn"><span>Family Site</span><i></i></div>
+    <ul class="family_list">
+      <li><a href="http://www.hanmaceng.co.kr" target="_blank">hanmac</a></li>
+      <li><a href="https://www.samaneng.co.kr/" target="_blank">saman</a></li>
+      <li><a href="http://www.jangheon.co.kr/" target="_blank">jangheon</a></li>
+      <li><a href="http://www.pre-cast.co.kr/" target="_blank">PTC</a></li>
+      <li>
+        <a href="http://www.hallasanup.com/" target="_blank">hallasanup</a>
+      </li>
+    </ul>
+  </div>
+  <hr />
+  <div class="footer_info">
+    <!-- h1 로고영역은 style.css에서 제어 -->
+    <div class="logo">
+      <a class="home" href="../en/index.html">Baron Consultants</a>
+    </div>
+
+    <span><em>Address.</em>554, Ogeum-ro, Songpa-gu, Seoul, Republic of Korea</span>
+    <span><em>Tel.</em>02-2141-7434</span>
+    <span><em>Mail.</em>baroncs@baroncs.co.kr</span>
+    <span><em>CEO.</em>Jang Jong Chan</span>
+    <span><em>© Baron Consultants Co,.Ltd All Rights Reserved.</em></span>
+  </div>
+</div>
+
+<!-- TOP버튼 -->
+<button class="btn_top js__top" onclick="window.scrollTo(0,0);">
+  <div class="arrow"></div>
+</button>
+<!-- //TOP버튼 -->
+
+<script>
+  // console.log('?');
+  // ^ TOP button
+  const urlParams = location.href;
+  $(function () {
+    if (urlParams.indexOf("recruit") != -1) {
+      $(".footer_info .home").attr("target", "_blank");
+    }
+  });
+  const topButton = document.querySelector(".js__top");
+  function adjustButtonPosition() {
+    const scrollY = window.scrollY; // 현재 스크롤 위치
+    const windowHeight = window.innerHeight; // 윈도우 높이
+    const documentHeight = document.documentElement.scrollHeight; // 문서 전체 높이
+    const bottomSpace = urlParams.indexOf("recruit") != -1 ? 120 : 400; // 탑 버튼이 아래에서 떨어져 있어야 하는 거리
+
+    // 문서의 맨 아래로부터 떨어지기 위한 계산
+    if (scrollY + windowHeight >= documentHeight - bottomSpace) {
+      topButton.style.bottom = `${
+        bottomSpace + (scrollY + windowHeight - documentHeight)
+      }px`;
+    } else {
+      topButton.style.bottom = "80px"; // 원래의 위치
+    }
+  }
+  window.addEventListener("scroll", adjustButtonPosition);
+  window.addEventListener("load", adjustButtonPosition);
+  // 새로운 코드 추가 - topButton의 표시/숨기기 로직
+  function toggleTopButtonClass() {
+    // console.log('*');
+    if (window.scrollY === 0) {
+      topButton.style.display = "none";
+    } else {
+      topButton.style.display = "initial";
+    }
+  }
+  window.addEventListener("scroll", toggleTopButtonClass);
+  window.addEventListener("load", toggleTopButtonClass);
+
+  // FOOTER - 패밀리사이트 열고닫기
+  $(function () {
+    $(".menu_my").mouseover(function () {
+      $(".menu_my_list").show();
+    });
+
+    $(".menu_my").mouseout(function () {
+      $(".menu_my_list").hide();
+    });
+
+    //footer family site toggle
+    $(".family_btn").click(function (event) {
+      event.stopPropagation(); // family_btn 클릭 시 이벤트 전파를 막음
+      $(".family_list").toggleClass("family_on");
+      $(".family_btn").toggleClass("family_on");
+    });
+
+    // 화면 아무 곳이나 클릭했을 때 family_list를 제외한 영역 클릭 시 리스트 닫기
+    $(document).click(function (event) {
+      if (
+        !$(event.target).closest(".family_list").length &&
+        !$(event.target).closest(".family_btn").length
+      ) {
+        // family_list와 family_btn 외의 영역을 클릭한 경우
+        $(".family_list").removeClass("family_on");
+        $(".family_btn").removeClass("family_on");
+      }
+    });
+
+    // FOOTER - 소프트웨어 항목 토글 (TOVA, EGBIM, GAIA)
+    // Event delegation을 사용해 나중에 로드되는 요소에도 적용
+    $(document).on("click", "footer .nav ol li.has_depth3 > a", function (e) {
+      e.preventDefault();
+      const depth3 = $(this).next(".depth3");
+      const isVisible = depth3.is(":visible");
+      
+      // 다른 소프트웨어 항목 닫기
+      $("footer .nav ol li.has_depth3 > .depth3").slideUp(200);
+      
+      // 현재 항목 토글
+      if (!isVisible) {
+        depth3.slideDown(200);
+      }
+    });
+
+    // 초기 상태: 모든 depth3 숨김
+    $("footer .nav ol li.has_depth3 > .depth3").hide();
+  });
+</script>

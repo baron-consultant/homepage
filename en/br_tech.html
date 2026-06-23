@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/font.css" />
+    <link rel="stylesheet" href="../assets/css/lib/aos.min.css" />
+    <link rel="stylesheet" href="../assets/css/lib/lenis.min.css" />
+    <script src="../assets/js/lib/aos.min.js"></script>
+    <script src="../assets/js/lib/lenis.min.js"></script>
+    <script src="../assets/js/lib/jquery-3.6.1.min.js"></script>
+    <script src="../assets/js/lib/gsap.min.js"></script>
+    <script src="../assets/js/lib/scrolltrigger.min.js"></script>
+    <script src="../assets/js/lib/scrollToPlugin.min.js"></script>
+    <script src="../assets/js/lib/lottie.min.js"></script>
+    <!-- CSS / JS -->
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/eng/common.css" />
+    <link rel="stylesheet" href="../assets/css/eng/baron.css" />
+    <script type="module" src="../assets/js/eng/common.js"></script>
+    <script src="../assets/js/br.js"></script>
+  
+    <!--영문작업중 스타일 수정-->
+    <style>
+    .br.tech section.sub1 .solutions_wrap ul.sw_txt li.sub{text-align: right;}
+    .br.tech section.sub1 .solutions_wrap ul li.sub{text-align: left;}
+    .br.tech section.sub3 ul.step_wrap > li ul.imgs_wrap > li span{font-size: 12px; line-height: 12px;}
+    .br.tech section.sub4 .benefits{display: flex; align-items: center; justify-content: flex-start; margin-top: 40px; flex-wrap: wrap; flex-direction: row; gap: 40px;}
+    .br.tech section.sub4 .benefits li{width: 268px;}
+
+    </style>
+
+</head>
+  <body>
+    <div class="wrap">
+      <header id="header"></header>
+      <ul class="map_list"></ul>
+      <div class="container br tech">
+        <!-- S : intro -->
+        <section class="intro">
+          <div class="txt_box" data-aos="fade-down" data-aos-duration="1000">
+            <p class="eng_txt">Powerful Tech for Digital Transformation</p>
+            <p class="main_txt">
+              Key technologies<br class="pc_br"> for realizing digital transformation
+            </p>
+            <p class="sub_txt">                
+              Based on our expertise in construction engineering and IT capabilities,<br class="pc_br">
+              we provide core technologies that support digital transformation across the entire infrastructure lifecycle.
+            </p>
+          </div>
+          <div class="scroll_box">
+            <span>Scroll</span>
+            <div></div>
+          </div>
+        </section>
+        <!-- E : intro -->
+        <!-- S : sub1 -->
+        <section class="sub1">
+          <div
+            class="txt_box dark"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
+            <!-- <p class="eng_txt">
+              The Digital Transformation across the Infrastructure Lifecycle
+            </p> -->
+            <p class="main_txt">
+              The Digital Transformation across<br class="pc_br"> the Infrastructure Lifecycle
+            </p>
+            <p class="sub_txt">
+                We provide solutions for design, construction, operation,<br class="pc_br">
+                and maintenance through specialized construction software and hardware based<br class="pc_br">
+                on advanced construction knowledge and expertise.
+              
+            </p>
+          </div>
+          <div class="solutions_wrap">
+            <div class="circle_wrap">
+              <div class="circle l"></div>
+              <div class="circle r"></div>
+              <ul class="sw">
+                <li class="bg">
+                  <img src="../assets/img/br/tech_sub1_sw_bg.jpg" />
+                  <div class="flexable"></div>
+                </li>
+                <li class="tit">Software</li>
+              </ul>
+              <ul class="hw">
+                <li class="bg">
+                  <img src="../assets/img/br/tech_sub1_hw_bg.jpg" />
+                  <div class="flexable"></div>
+                </li>
+                <li class="tit">Hardware</li>
+              </ul>
+            </div>
+            <div class="txt_box">
+              <ul class="sw_txt">
+                <li class="blind">Software</li>
+                <li class="sub">
+                  <em>Customized construction <br> specialized S/W</em>
+                  Customized support for the production and <br>
+                  management of BIM deliverables
+                </li>
+                <li class="fs-20">Solution</li>
+                <li class="fs-20">Package program</li>
+              </ul>
+              <ul class="hw_txt">
+                <li class="blind">Hardware</li>
+                <li class="sub">
+                  <em>High-performance H/W<br>for collaboration</em>
+                  Supports real-time collaboration <br>and efficient decision-making
+                </li>
+                <li class="fs-20">Engineering signage</li>
+                <li class="fs-20">Communication system</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <!-- E : sub1 -->
+        <div class="inner">
+          <div class="circle js__circle"></div>
+          <!-- S : sub2 -->
+          <section class="sub2">
+            <div
+              class="txt_box dark"
+              data-aos="fade-down"
+              data-aos-duration="1000"
+            >
+              <p class="eng_txt">Customized Civil Engineering Software</p>
+              <p class="main_txt">
+                Custom Construction<br class="m_br" />Engineering Software
+              </p>
+              <p class="sub_txt">
+                We support digital transformation across the entire lifecycle of infrastructure.
+              </p>
+            </div>
+          </section>
+          <!-- E : sub2 -->
+          <!-- S : sub3 -->
+          <section class="sub3">
+            <div class="sphere" id="js__lottie"></div>
+            <div class="ani_line"></div>
+            <ul class="step_wrap">
+              <li>
+                <i></i>
+                <p>
+                  <span class="tit">Research and Planning</span>
+                  By building a reliable GIS-based model,<br class="pc_br"> we support accurate <b>information models.</b>
+                </p>
+                <ul class="imgs_wrap">
+                  <li>
+                    <img src="../assets/img/br/tech_sub3_step1_1.jpg" /><span
+                      >Current Status <br>
+Natural Environment</span
+                    >
+                  </li>
+                  <li>
+                    <img src="../assets/img/br/tech_sub3_step1_2.jpg" /><span
+                      >Current Status<br>
+Social Environment</span
+                    >
+                  </li>
+                  <li>
+                    <img src="../assets/img/br/tech_sub3_step1_3.jpg" /><span
+                      >Surveying <br>
+Inherent/Essence</span
+                    >
+                  </li>
+                  <li>
+                    <img src="../assets/img/br/tech_sub3_step1_4.jpg" /><span
+                      >Terrain Model</span
+                    >
+                  </li>
+                  <li>
+                    <img src="../assets/img/br/tech_sub3_step1_5.jpg" /><span
+                      >Subsurface Layer<br>
+Model</span
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <i></i>
+                <p>
+                  <span class="tit">Design</span>
+                  Based on efficient technology verification and <br class="pc_br">optimization, we <b>support the production and<br class="pc_br">management of high-quality digital deliverables.</b>
+                </p>
+                <ul class="imgs_wrap">
+                  <li>
+                    <img src="../assets/img/br/tech_sub3_step2_1.jpg" /><span
+                      >Analysis and<br>
+Optimization</span
+                    >
+                  </li>
+                  <li>
+                    <img src="../assets/img/br/tech_sub3_step2_2.jpg" /><span
+                      >Simulation</span
+                    >
+                  </li>
+                  <li>
+                    <img src="../assets/img/br/tech_sub3_step2_3.jpg" /><span
+                      >Structural Analysis</span
+                    >
+                  </li>
+                  <li>
+                    <img src="../assets/img/br/tech_sub3_step2_4.jpg" /><span
+                      >Design BIM Model</span
+                    >
+                  </li>
+                  <li>
+                    <img src="../assets/img/br/tech_sub3_step2_5.jpg" /><span
+                      >Digital Deliverable<br>
+Creation<br>/Management</span
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <i></i>
+                <p>
+                  <span class="tit">Construction</span>
+                  Through a real-time communication and collaboration <br class="pc_br"> environment based on an accurate information model,<br class="pc_br">we <b>support fast and optimized decision-making.</b>
+                </p>
+                <ul class="imgs_wrap">
+                  <li>
+                    <img src="../assets/img/br/tech_sub3_step3_1.jpg" /><span
+                      >Construction<br>
+BIM Model</span>
+                  </li>
+                  <li>
+                    <img src="../assets/img/br/tech_sub3_step3_2.jpg" /><span
+                      >Simulation</span>
+                  </li>
+                  <li>
+                    <img src="../assets/img/br/tech_sub3_step3_3.jpg" /><span
+                      >Integrated <br> Construction<br>
+Information <br>Management</span
+                    >
+                  </li>
+                  <li>
+                    <img src="../assets/img/br/tech_sub3_step3_4.jpg" /><span
+                      >Construction<br> 
+Project Management</span
+                    >
+                  </li>
+                  <li>
+                    <img src="../assets/img/br/tech_sub3_step3_5.jpg" /><span
+                      >BIM-IoT Integration</span
+                    >
+                  </li>
+                  <li>
+                    <img src="../assets/img/br/tech_sub3_step3_6.jpg" /><span
+                      >Real-Time<br>
+Collaboration System</span
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <i></i>
+                <p>
+                  <span class="tit">Operation and Maintenance</span>
+                  Based on asset information,<br class="pc_br">we <b>support proactive infrastructure <br class="pc_br">
+maintenance and management.</b>
+                </p>
+                <ul class="imgs_wrap">
+                  <li>
+                    <img src="../assets/img/br/tech_sub3_step4_1.jpg" /><span
+                      >As-Built BIM Model</span
+                    >
+                  </li>
+                  <li>
+                    <img src="../assets/img/br/tech_sub3_step4_2.jpg" /><span
+                      >BIM-IoT Integration</span
+                    >
+                  </li>
+                  <li>
+                    <img src="../assets/img/br/tech_sub3_step4_3.jpg" /><span
+                      >Real-Time<br>
+Integrated <br>Information<br>
+Management System</span
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <!-- E : sub3 -->
+        </div>
+        <!-- S : sub4 -->
+        <section class="sub4">
+          <div
+            class="txt_box dark"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
+            <p class="eng_txt">High Performance Hardware for BIG Room</p>
+            <p class="main_txt">
+              Key Requirements for Real-Time Sharing <br class="pc_br">and Collaboration Space (BIG Room)
+            </p>
+            <p class="sub_txt">
+              We provide the optimal BIG Room environment based on an engineering-grade signage system.
+            </p>
+          </div>
+          <div class="big_room_wrap">
+            <div class="tit">Engineering Signage System</div>
+            <div class="content big_room">
+              <ul class="tools">
+                <li>Display</li>
+                <li>Server and Storage</li>
+                <li>Video Conferencing System</li>
+                <li>PC and Auxiliary Monitor</li>
+                <li>Other Auxiliary Equipment</li>
+              </ul>
+            </div>
+            <ul class="content benefits">
+              <li>
+                <img src="../assets/img/br/tech_sub4_ico1.svg" /><span>
+                    Effective <br /><b>Information <br class="m_br">Delivery</b></span>
+              </li>
+              <li>
+                <img src="../assets/img/br/tech_sub4_ico2.svg" /><span
+                  >Enhancing<br />
+<b>Operational <br class="m_br">Efficiency</b></span>
+              </li>
+              <li>
+                <img src="../assets/img/br/tech_sub4_ico3.svg" /><span
+                  ><b>Enhancing User <br class="m_br">Experience</b><br />
+and User <br class="m_br">Convenience</span>
+              </li>
+              <li>
+                <img src="../assets/img/br/tech_sub4_ico4.svg" /><span
+                  >Enhancing<br />
+<b>Brand<br class="m_br">Image</b></span>
+              </li>
+              <li>
+                <img src="../assets/img/br/tech_sub4_ico5.svg" /><span
+                  ><b>Securing<br class="m_br">Flexibility</b><br />
+and Scalability</span>
+              </li>
+              <li>
+                <img src="../assets/img/br/tech_sub4_ico6.svg" /><span
+                  ><b>Unified<br class="m_br">Communications</b><br />
+Platform</span>
+              </li>
+              <li>
+                <img src="../assets/img/br/tech_sub4_ico7.svg" /><span
+                  >Support for<br class="m_br">Data-Driven<br />
+<b>Decision Making</b></span
+                >
+              </li>
+            </ul>
+            <div class="req_list">
+              <span>Minimum Requirements for BIG Room Configuration <i></i></span>
+              <ul>
+                <li>- Work Space</li>
+                <li>- Planning Board</li>
+                <li>- BIM Dashboard</li>
+                <li>- Meeting Space</li>
+                <li>- Equipment <small>(H/W, S/W)</small></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <!-- E : sub4 -->
+      </div>
+      <footer id="footer"></footer>
+    </div>
+  </body>
+</html>

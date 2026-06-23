@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>(주)바론컨설턴트</title>
+    <!-- ASSETS -->
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/font.css" />
+    <link rel="stylesheet" href="../assets/css/lib/aos.min.css" />
+    <link rel="stylesheet" href="../assets/css/lib/lenis.min.css" />
+    <script src="../assets/js/lib/aos.min.js"></script>
+    <script src="../assets/js/lib/lenis.min.js"></script>
+    <script src="../assets/js/lib/jquery-3.6.1.min.js"></script>
+    <script src="../assets/js/lib/gsap.min.js"></script>
+    <script src="../assets/js/lib/scrolltrigger.min.js"></script>
+    <script src="../assets/js/lib/scrollToPlugin.min.js"></script>
+    <script src="../assets/js/lib/MotionPathPlugin.min.js"></script>
+    <script src="../assets/js/lib/lottie.min.js"></script>
+    <!-- CSS / JS -->
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="../assets/css/digital.css" />
+    <script type="module" src="../assets/js/common.js"></script>
+    <script defer src="../assets/js/dt.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <header id="header"></header>
+      <ul class="map_list"></ul>
+      <div class="container dt use">
+        <!-- S : intro -->
+        <section class="intro">
+          <div class="txt_box" data-aos="fade-down" data-aos-duration="1000">
+            <p class="eng_txt">Digital Transformation across the Construction Lifecycle</p>
+            <p class="main_txt">
+              건설 전 생애주기에서의 <br class="m_br" />과정과 결과의 혁신
+            </p>
+            <p class="sub_txt">
+              건설산업 특성을 반영한 BIM 기반 프로세스로의
+              <br class="m_br" />전환을 통해 <br class="pc_br" />모든 사용자에게
+              쉽고 편리한 <br class="m_br" />실질적 편익을 제공합니다.
+            </p>
+          </div>
+          <div class="scroll_box">
+            <span>Scroll</span>
+            <div></div>
+          </div>
+        </section>
+        <!-- E : intro -->
+        <div class="bg"></div>
+        <div class="bg_line">
+          <svg
+            width="1920"
+            height="5280"
+            viewBox="0 0 1920 5280"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <linearGradient
+                id="lineGradient"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="0"
+              >
+                <stop offset="0%" stop-color="#00F2FF" />
+                <stop offset="100%" stop-color="#1500FF" />
+              </linearGradient>
+
+              <linearGradient
+                id="fadeMaskGradient"
+                x1="0"
+                y1="0"
+                x2="0"
+                y2="1 "
+              >
+                <stop offset="0%" stop-color="white" stop-opacity="0" />
+                <stop offset="0.2" stop-color="white" stop-opacity="1" />
+                <stop offset="0.8" stop-color="white" stop-opacity="1" />
+                <stop offset="100%" stop-color="white" stop-opacity="0" />
+              </linearGradient>
+              <mask id="fadeMask">
+                <path
+                  id="maskPath"
+                  d="M960.328 0C960.328 342 650.328 328.406 650.328 609.5C650.326 1131 1803.83 1299 1803.83 1847C1803.83 2529 118.804 2341.68 118.804 3082.5C118.804 3872 1816.2 3750.5 1816.2 4362.5C1816.2 4923.5 988.829 4966 988.829 5279.5"
+                  stroke="url(#fadeMaskGradient)"
+                  stroke-width="3"
+                  fill="none"
+                />
+              </mask>
+            </defs>
+            <path
+              id="animatedLine"
+              d="M960.328 0C960.328 342 650.328 328.406 650.328 609.5C650.326 1131 1803.83 1299 1803.83 1847C1803.83 2529 118.804 2341.68 118.804 3082.5C118.804 3872 1816.2 3750.5 1816.2 4362.5C1816.2 4923.5 988.829 4966 988.829 5279.5"
+              stroke="url(#lineGradient)"
+              stroke-width="3"
+              fill="none"
+              mask="url(#fadeMask)"
+            />
+          </svg>
+        </div>
+        <section class="overview">
+          <div class="inner">
+            <div class="objs_wrap" data-aos="fade-down" data-aos-duration="500">
+              <img src="../assets/img/dt/use_overview_obj.jpg" />
+              <ul class="blobs"></ul>
+            </div>
+            <div
+              class="txt_box dark"
+              data-aos="fade-down"
+              data-aos-duration="1000"
+            >
+              <p class="eng_txt">BIM Characteristics of each Industry</p>
+              <p class="main_txt">산업별 정보모델</p>
+            </div>
+            <div class="con_txt">
+              <p>
+                <b>인프라 건설산업(Infrastructure construction industry)</b>은
+                제조업·건축업과 달리 지형·선형 등 기본요소의 변화로 동일 형태가
+                없고, 시설물의 구성뿐만 아니라 사업 종류에 따른 특성과
+                프로세스도 달라 모델의 반복과 재사용이 어렵습니다.
+              </p>
+              <p>
+                그렇기 때문에, 인프라 건설산업의 정보모델은 건설산업 전용 S/W
+                또는 여러가지 범용 S/W를 조합 또는 혼용하여 매 프로젝트마다 신규
+                모델을 만들어야만 합니다.
+              </p>
+              <button class="btn_more" data-value="overview_more">
+                자세히 보기
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="left process">
+          <div class="objs_wrap">
+            <div class="ani"></div>
+            <img src="../assets/img/dt/use_process_obj_point.png" class="point" />
+            <ul class="blobs"></ul>
+          </div>
+          <div
+            class="txt_box dark"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
+            <p class="eng_txt">
+              BIM Process in Architecture & <br class="m_br" />Infrastructure
+              Construction
+            </p>
+            <p class="main_txt">건축과 인프라 건설의 BIM 비교</p>
+          </div>
+          <div class="con_txt">
+            <p>
+              건축은 수직적 구조로 층과 공간의 반복성이 높아 공종 간 간섭 검토
+              중심의 <br class="pc_br" />설계가 이루어지지만, 인프라 건설산업은
+              넓고 긴 수평적 구조로 인해 <br class="pc_br" />지형·지반
+              조건과선·후행 공종 관계까지 복합적으로 고려된 설계가 필요합니다.
+            </p>
+            <button class="btn_more" data-value="process_more">
+              자세히 보기
+            </button>
+          </div>
+        </section>
+        <section class="right system">
+          <div class="objs_wrap">
+            <video
+              src="../assets/img/dt/use_system_obj.mp4"
+              autoplay
+              playsinline
+              muted
+              loop
+            ></video>
+            <img src="../assets/img/dt/use_system_obj_point.png" class="point" />
+            <ul class="blobs"></ul>
+          </div>
+          <div
+            class="txt_box dark"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
+            <p class="eng_txt">Integrated GIS & BIM system</p>
+            <p class="main_txt">
+              건설산업의 디지털전환은 <br />GIS와 BIM 복합시스템
+            </p>
+          </div>
+          <div class="con_txt">
+            <p>
+              인프라 건설산업(Infrastructure Construction)의 디지털전환
+              <br class="pc_br" />실현을 위해서는 3D 모델 기반의 시설물(건설)
+              정보(BIM) 뿐만 아니라 <br class="pc_br" />위치기반(지리, 지형,
+              지반상태 포함)의 공간정보(GIS)가 <br class="pc_br" />융합(GSIM :
+              Geographic and Structure Infromation Model)되어
+              <br class="pc_br" />함께 사용되어야 합니다.
+            </p>
+            <button class="btn_more" data-value="system_more">
+              자세히 보기
+            </button>
+          </div>
+        </section>
+        <section class="left cycle">
+          <div class="objs_wrap">
+            <div class="ani"></div>
+            <img src="../assets/img/dt/use_cycle_obj_point.png" class="point" />
+            <ul class="blobs"></ul>
+          </div>
+          <div
+            class="txt_box dark"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
+            <p class="eng_txt">
+              Connected Infrastructure Construction Lifecycle<br class="m_br" /> through Information Model
+            </p>
+            <p class="main_txt">건설 전 생애주기와 정보모델 연계</p>
+          </div>
+          <div class="con_txt">
+            <p>
+              BIM 모델 기반으로 통합하여 건설정보와 절차를 표준화된 방식으로
+              <br />건설단계별(설계단계, 시공단계, 운영/유지관리단계) 공정간
+              상호 연계가 이루어져야 합니다.
+            </p>
+            <button class="btn_more" data-value="cycle_more">
+              자세히 보기
+            </button>
+          </div>
+        </section>
+        <section class="end">
+          <p>
+            <b>건설산업의 디지털전환</b>은 <br class="pc_br" /><em
+              >건설 전생애주기에서 <br class="m_br" />사용자의
+              편의성·효율성·정확성을 높이는</em
+            >
+            <br />과정과 결과의 혁신으로 이어져야 합니다.
+          </p>
+          <button class="btn_more" data-value="end_more">자세히 보기</button>
+          <div class="objs_wrap" data-aos="fade-down" data-aos-duration="500">
+            <div>
+              <span>Process Innovation<em>과정의 혁신</em></span>
+              <ul class="blobs"></ul>
+            </div>
+            <div>
+              <span>Product Innovation<em>결과의 혁신</em></span>
+              <ul class="blobs"></ul>
+            </div>
+            <div class="dot_line" id="js__lottie"></div>
+          </div>
+        </section>
+      </div>
+
+      <footer id="footer"></footer>
+    </div>
+  </body>
+</html>

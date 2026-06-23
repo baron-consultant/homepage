@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EEDBRC8DL5"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'G-EEDBRC8DL5');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GAIA</title>
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/font.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" type="text/css" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.9/dist/lenis.css">
+  <script type="text/javascript" src="./js/jquery-3.6.1.min.js"></script>
+  <script type="text/javascript" src="./js/jquery.mousewheel.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+  <script src="/baron/assets/js/egbim-baron-shell.js?v=20260623h"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    window.initProductBaronShell?.('gaia', 'ko');
+  });
+  </script>
+  <script type="text/javascript" src="./js/results.js"></script>
+  <script>
+  function goto(id) {
+    console.log('로그발생');
+    document.getElementById(id).scrollIntoView({
+      behavior: "instant"
+    });
+  }
+  </script>
+</head>
+
+<body>
+  <!-- "js__"로 시작하는 클래스는 only 자바스크립트용입니다. -->
+  <!-- XXXX js__넣어서 css 작성 금지 XXXX -->
+  <div class="wrapper">
+<div class="container results">
+      <div class="mouse_mark js__mouse_mark" style="visibility: hidden; opacity: 0; display:none;"><span>SCROLL</span></div>
+      <section class="intro">
+        <div class="top">
+          <h2 data-aos="fade-down" data-aos-duration="1000">성과품</h2>
+          <span>편리하고 쉽게 직관적인 고품질의 결과물 정리</span>
+        </div>
+        <div class="keyword">
+          <i class="gaia_obj k"></i>
+          <span>편리하고, 쉽게, 직관적인</span>
+          <p>현장 시추조사 기록지, 시추 주상도, 주상도별 Profile,<br>
+            지반조사 위치도 등 <em>고품질의 성과품을 다양하게 제공</em>합니다.</p>
+        </div>
+        <div class="condition">
+          <div class="diagram_wrap" data-aos="fade-up" data-aos-duration="1000">
+            <div class="dia_elements_wrap">
+              <div class="dia_element dia_element01">
+                <i></i>
+                <span class="dia_tit"><em>지반조사 위치도</em></span>
+                <div class="line"></div>
+              </div>
+              <div class="dia_element dia_element02">
+                <i></i>
+                <span class="dia_tit"><em>지층정보<br>
+                    요약</em></span>
+                <div class="line"></div>
+              </div>
+              <div class="dia_element dia_element03">
+                <i></i>
+                <span class="dia_tit"><em>주상도별 <br class="d-block d-lg-none__993">Profile</em></span>
+                <div class="line"></div>
+              </div>
+              <div class="dia_element dia_element04">
+                <i></i>
+                <span class="dia_tit"><em>시추 주상도</em></span>
+                <div class="line"></div>
+              </div>
+              <div class="dia_element dia_element05">
+                <i></i>
+                <span class="dia_tit"><em>현장 <br class="d-block d-lg-none__993">시추조사<br>
+                    기록지</em></span>
+                <div class="line"></div>
+              </div>
+            </div>
+            <div class="dia_circles_wrap">
+              <div class="circle_dash"></div>
+              <div class="circle_belt"></div>
+              <div class="circle_core">
+                <span>고품질의</span>
+                <span>성과품</span>
+              </div>
+              <div class="circle_dots move">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+              <div class="circle_dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="route">
+        <div class="fix">
+          <ul class="tabs">
+            <li class="section_01_img"><a onclick="window.goto('sec1')"><i></i>지반조사 위치도</a></li>
+            <li class="section_02_img"><a onclick="window.goto('sec3')"><i></i>현장 시추조사 기록지</a></li>
+            <li class="section_03_img"><a onclick="window.goto('sec5')"><i></i>시추 주상도</a></li>
+            <li class="section_04_img"><a onclick="window.goto('sec8')"><i></i>주상도별 Profile</a></li>
+            <li class="section_05_img"><a onclick="window.goto('sec10')"><i></i>지층정보 요약</a></li>
+          </ul>
+          <div class="fix_tit js__mouse_area">
+            <ul class="subs">
+              <li class="section_01_img">
+                <span class="sub_tit">지반조사 위치도</span>
+                <span class="sub_text">
+                  <em>미리보기</em><br>
+                  <span class="sub_text_mo">생성된 성과품을 내보내기 전에 <em>성과품별/시추공별로 <br>성과품의 내용</em>을 확인할 수 있습니다.</span>
+                  <em>Web지도 보기 옵션</em><br>
+                  <span class="sub_text_mo">일반지도 및 위성지도로 보기가 가능하고, <em>도로선형정보와 계획시추공/수행 시추공의 위치와 이름을 범례에 따라
+                      표현</em>
+                    합니다.</span>
+                  <em>내보내기-DWG</em>로 제공<br>
+                </span>
+              </li>
+              <li class="section_02_img">
+                <span class="sub_tit">현장 시추조사 기록지</span>
+                <span class="sub_text">
+                  <em>기록지 자동 생성</em> <br>
+                  <span class="sub_text_mo">현장 시추조사 기록지는 현장 시추조사 정보를 다운로드 받는 즉시<em>성과품으로 자동 생성</em>되며, 신뢰성 확보를 위해
+                    <em>수정이 불가</em>합니다.</span>
+                  <em>내보내기-PDF</em>로 제공
+                </span>
+              </li>
+              <li class="section_03_img">
+                <span class="sub_tit">시추 주상도</span>
+                <span class="sub_text">
+                  <em>다양한 주상도 양식 제공</em><br>
+                  <span class="sub_text_mo">기본양식, 한국도로공사, 한국토지주택공사, 국가철도공단 등 <em>사용처 요구에 맞는 시추주상도 양식 및 기본 설정</em>을
+                    제공합니다.</span>
+                  <em>내보내기 - DWG, PDF</em>로 제공
+                </span>
+              </li>
+              <li class="section_04_img">
+                <span class="sub_tit">주상도별 Profile</span>
+                <span class="sub_text">
+                  <em>주상도 Profile 설정</em><br>
+                  <span class="sub_text_mo">주상도의 Y축 스케일, 주상도 문자별 크기, 심볼의 폭 등
+                    <em>사용자 요구에 따라 설정을 일괄 적용</em>합니다.</span>
+                  <em>내보내기 - DWG</em>로 제공
+                </span>
+              </li>
+              <li class="section_05_img">
+                <span class="sub_tit">지층정보 요약</span>
+                <span class="sub_text">
+                  <em>지층정보 요약표</em><br>
+                  <span class="sub_text_mo">프로젝트 내 모든 주상도에 존재하는 <em>지층속성값의 범위를 표로 요약하여 제시</em>하며, 조사지역의 <em>토질분석과
+                      지반조사보고서
+                      작성에 활용</em>할 수 있습니다.</span>
+                  <em>내보내기 - Excel</em>로 제공
+                </span>
+              </li>
+            </ul>
+            <ul class="imgs">
+              <li class="section_01_img sec_img">
+                <ul>
+                  <li class="sec_img_item">
+                    <div class="point_01">
+                      <div class="point_tit">
+                        <span class="point_tag">
+                          미리보기
+                        </span>
+                        <span class="point_tag_arrow">
+                          <i class="line"></i>
+                          <i class="circle"></i>
+                        </span>
+                      </div>
+                      <span class="point_explain">생성된 성과품을 내보내기 전에 <em>성과품별/시추공별로 <br>성과품의 내용</em>을 확인할 수 있습니다.</span>
+                    </div>
+                    <div class="point_02">
+                      <div class="point_tit">
+                        <span class="point_tag">
+                          Web지도 보기 옵션
+                        </span>
+                        <span class="point_tag_arrow">
+                          <i class="circle"></i>
+                          <i class="line"></i>
+                        </span>
+                      </div>
+                      <span class="point_explain">일반지도 및 위성지도로 보기가 가능하고, <em>도로선형정보와 <br>계획시추공/수행 시추공의 위치와 이름을 범례에 따라
+                          표현</em>
+                        합니다.</span>
+                    </div>
+                  </li>
+                  <li class="sec_img_item">
+                    <div class="point_03">
+                      <div class="point_tit">
+                        <span class="point_tag">내보내기</span>
+                        <span class="point_tag_arrow">
+                          <i class="line"></i>
+                          <i class="circle"></i>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="point_04">
+                      <span class="point_tag">DWG</span>
+                    </div>
+                    <!-- <object class="img_box m" data="./img/slide_img_01_03_m.png"></object> -->
+                    <!-- <div class="m_box">
+                      <div class="point_03">
+                        <div class="point_tit">
+                          <span class="point_tag">내보내기</span>
+                          <span class="point_tag_arrow">
+                            <i class="line"></i>
+                            <i class="circle"></i>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="point_04">
+                        <span class="point_tag">DWG</span>
+                      </div>
+                      <div class="img_box m">
+                        <object data="./img/slide_img_01_03_m.png"></object>
+                      </div>
+                    </div> -->
+                  </li>
+                </ul>
+              </li>
+              <li class="section_02_img sec_img">
+                <ul>
+                  <li class="sec_img_item">
+                    <div class="point_01">
+                      <div class="point_tit">
+                        <span class="point_tag_arrow">
+                          <i class="circle"></i>
+                          <i class="line"></i>
+                        </span>
+                        <span class="point_tag">
+                          기록지 자동 생성
+                        </span>
+                      </div>
+                      <span class="point_explain">현장 시추조사 기록지는 현장 시추조사 정보를 다운로드 받는 즉시 <br>성과품으로 자동 생성되며, 신뢰성 확보를 위해 수정이
+                        불가합니다.</span>
+                    </div>
+                  </li>
+                  <li class="sec_img_item">
+                    <div class="point_03">
+                      <div class="point_tit">
+                        <span class="point_tag">내보내기</span>
+                        <span class="point_tag_arrow">
+                          <i class="line"></i>
+                          <i class="circle"></i>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="point_04">
+                      <span class="point_tag">PDF</span>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="section_03_img sec_img">
+                <ul>
+                  <li class="sec_img_item">
+                    <div class="point_01">
+                      <div class="point_tit">
+                        <span class="point_tag">
+                          다양한 주상도 양식 제공
+                        </span>
+                        <span class="point_tag_arrow">
+                          <i class="line"></i>
+                          <i class="circle"></i>
+                        </span>
+                      </div>
+                      <span class="point_explain">기본양식, 한국도로공사, 한국토지주택공사, 국가철도공단 등 <br>사용처 요구에 맞는 시추주상도 양식 및 기본 설정을
+                        제공합니다.</span>
+                    </div>
+                  </li>
+                  <li class="sec_img_item">
+                    <div>
+                      <div class="point_02">
+                        <div class="point_tit">
+                          <span class="point_tag">내보내기</span>
+                          <span class="point_tag_arrow">
+                            <i class="line"></i>
+                            <i class="circle"></i>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="point_03">
+                        <span class="point_tag">DWG</span>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="point_04">
+                        <span class="point_tag">PDF</span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="section_04_img sec_img">
+                <ul>
+                  <li class="sec_img_item">
+                    <div class="point_01">
+                      <div class="point_tit">
+                        <span class="point_tag">
+                          주상도 Profile 설정
+                        </span>
+                        <span class="point_tag_arrow">
+                          <i class="circle"></i>
+                          <i class="line"></i>
+                        </span>
+                      </div>
+                      <span class="point_explain">주상도의 Y축 스케일, 주상도 문자별 크기, 심볼의 폭 등 <br><em>사용자 요구에 따라 설정을 일괄
+                          적용</em>합니다.</span>
+                    </div>
+                  </li>
+                  <li class="sec_img_item">
+                    <div class="point_02">
+                      <div class="point_tit">
+                        <span class="point_tag">내보내기</span>
+                        <span class="point_tag_arrow">
+                          <i class="line"></i>
+                          <i class="circle"></i>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="point_03">
+                      <span class="point_tag">DWG</span>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="section_05_img sec_img">
+                <ul>
+                  <li class="sec_img_item">
+                    <div class="point_01">
+                      <div class="point_tit">
+                        <span class="point_tag">
+                          지층정보 요약표
+                        </span>
+                        <span class="point_tag_arrow">
+                          <i class="circle"></i>
+                          <i class="line"></i>
+                        </span>
+                      </div>
+                      <span class="point_explain">프로젝트 내 모든 주상도에 존재하는 <em>지층속상값의 범위를<br> 표로 요약하여 제시하며, 조사지역의 토질분석과<br>
+                          지반조사보고서 작성에 활용</em>할 수 있습니다.</span>
+                    </div>
+                  </li>
+                  <li class="sec_img_item">
+                    <div class="point_02">
+                      <div class="point_tit">
+                        <span class="point_tag">내보내기</span>
+                        <span class="point_tag_arrow">
+                          <i class="line"></i>
+                          <i class="circle"></i>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="point_03">
+                      <span class="point_tag">EXCEL</span>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="sec1"></div>
+        <div id="sec2"></div>
+        <div id="sec3"></div>
+        <div id="sec4"></div>
+        <div id="sec5"></div>
+        <div id="sec6"></div>
+        <div id="sec7"></div>
+        <div id="sec8"></div>
+        <div id="sec9"></div>
+        <div id="sec10"></div>
+      </section>
+    </div>
+    <!-- footer -->
+    <!-- //footer -->
+  </div>
+
+  <script>
+  AOS.init();
+
+  const lenis = new Lenis()
+  lenis.on('scroll', (e) => {
+    //console.log(e)
+  })
+  lenis.on('scroll', ScrollTrigger.update)
+  gsap.ticker.add((time) => {
+    lenis.raf(time * 1000)
+  })
+  gsap.ticker.lagSmoothing(0)
+  </script>
+</body>
+
+
+</html>

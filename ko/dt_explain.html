@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- ASSETS -->
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/font.css" />
+    <link rel="stylesheet" href="../assets/css/lib/aos.min.css" />
+    <link rel="stylesheet" href="../assets/css/lib/lenis.min.css" />
+    <script src="../assets/js/lib/aos.min.js"></script>
+    <script src="../assets/js/lib/lenis.min.js"></script>
+    <script src="../assets/js/lib/jquery-3.6.1.min.js"></script>
+    <script src="../assets/js/lib/gsap.min.js"></script>
+    <script src="../assets/js/lib/scrolltrigger.min.js"></script>
+    <script src="../assets/js/lib/scrollToPlugin.min.js"></script>
+    <script src="../assets/js/lib/MotionPathPlugin.min.js"></script>
+    <script src="../assets/js/lib/lottie.min.js"></script>
+    <!-- CSS / JS -->
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="../assets/css/digital.css" />
+    <script type="module" src="../assets/js/common.js"></script>
+    <script defer src="../assets/js/dt.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <header id="header"></header>
+      <ul class="map_list"></ul>
+      <div class="container dt explain">
+        <!-- S : intro -->
+        <section class="intro">
+          <div class="txt_box" data-aos="fade-down" data-aos-duration="1000">
+            <p class="eng_txt">
+             Digital Transformation through <br class="m_br" />the Convergence of Technologies
+            </p>
+            <p class="main_txt">
+              기술 융합을 통한 <br class="m_br" />건설산업의 디지털전환
+            </p>
+            <p class="sub_txt">
+              건설산업에서의 디지털전환(Digital Transformation)은 <br />
+              BIM, GIS, Digital Twin의 기술 융합을 통해서만<br class="m_br" /> 실현·구현이 가능합니다
+            </p>
+          </div>
+          <div class="scroll_box">
+            <span>Scroll</span>
+            <div></div>
+          </div>
+        </section>
+        <!-- E : intro -->
+        <div class="bg"></div>
+        <div class="bg_line">
+          <svg
+            width="1920"
+            height="5280"
+            viewBox="0 0 1920 5280"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <linearGradient
+                id="lineGradient"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="0"
+              >
+                <stop offset="0%" stop-color="#00F2FF" />
+                <stop offset="100%" stop-color="#1500FF" />
+              </linearGradient>
+
+              <linearGradient
+                id="fadeMaskGradient"
+                x1="0"
+                y1="0"
+                x2="0"
+                y2="1 "
+              >
+                <stop offset="0%" stop-color="white" stop-opacity="0" />
+                <stop offset="0.2" stop-color="white" stop-opacity="1" />
+                <stop offset="0.8" stop-color="white" stop-opacity="1" />
+                <stop offset="100%" stop-color="white" stop-opacity="0" />
+              </linearGradient>
+              <mask id="fadeMask">
+                <path
+                  id="maskPath"
+                  d="M960.328 0C960.328 342 650.328 328.406 650.328 609.5C650.326 1131 1803.83 1299 1803.83 1847C1803.83 2529 118.804 2341.68 118.804 3082.5C118.804 3872 1816.2 3750.5 1816.2 4362.5C1816.2 4923.5 988.829 4966 988.829 5279.5"
+                  stroke="url(#fadeMaskGradient)"
+                  stroke-width="3"
+                  fill="none"
+                />
+              </mask>
+            </defs>
+            <path
+              id="animatedLine"
+              d="M960.328 0C960.328 342 650.328 328.406 650.328 609.5C650.326 1131 1803.83 1299 1803.83 1847C1803.83 2529 118.804 2341.68 118.804 3082.5C118.804 3872 1816.2 3750.5 1816.2 4362.5C1816.2 4923.5 988.829 4966 988.829 5279.5"
+              stroke="url(#lineGradient)"
+              stroke-width="3"
+              fill="none"
+              mask="url(#fadeMask)"
+            />
+          </svg>
+        </div>
+        <section class="overview">
+          <div class="inner">
+            <div class="objs_wrap" data-aos="fade-down" data-aos-duration="500">
+              <img src="../assets/img/dt/explain_overview_obj.jpg" />
+              <ul class="blobs"></ul>
+            </div>
+            <div
+              class="txt_box dark"
+              data-aos="fade-down"
+              data-aos-duration="1000"
+            >
+              <p class="eng_txt">Infrastructure Construction Industry</p>
+              <p class="main_txt">건설산업이란?</p>
+            </div>
+            <div class="con_txt">
+              <p>
+                <b>인프라 건설산업(Infrastructure construction industry)</b>은
+                국가 경제와 사회의 필수적 기반시설을 <br class="m_br" />구축하는
+                산업으로서 법적 규제와 공공정책의 영향을 받으며 발전하고
+                있습니다.
+              </p>
+              <p>
+                최근 건설산업은 디지털 기술, 친환경 정책, 민간 투자 활성화 등의
+                요소와 결합되며 새로운 패러다임으로 변화하고 있습니다.
+              </p>
+              <p>
+                향후 스마트 기술과 지속가능성을 중심으로 건설산업은 발전하며
+                특히 BIM, 디지털트윈, AI, 친환경 인프라의 적용이 점차 확대될
+                전망입니다.
+              </p>
+              <button class="btn_more" data-value="overview_more">
+                자세히 보기
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="left bim">
+          <div class="objs_wrap">
+            <video
+              src="../assets/img/dt/explain_bim_obj.mp4"
+              playsinline
+              muted
+            ></video>
+            <img src="../assets/img/dt/explain_bim_obj_point.png" class="point" />
+            <ul class="blobs"></ul>
+          </div>
+          <div
+            class="txt_box dark"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
+            <p class="eng_txt">Building Information Modeling</p>
+            <p class="main_txt">건설정보모델링(BIM)</p>
+          </div>
+          <div class="con_txt">
+            <p>
+              <b>BIM(Building Information Modeling, 건설정보모델링)</b>은
+              <br class="pc_br" />시설물의 생애주기 동안 발생하는 모든 정보를 3D
+              모델 기반으로 <br class="pc_br" />통합하여 건설 정보와 절차를
+              표준화된 방식으로 상호 연계하고 <br class="pc_br" />디지털 협업이
+              가능하도록 하는 디지털전환(D/X) 체계를 의미합니다.
+            </p>
+            <button class="btn_more" data-value="bim_more">자세히 보기</button>
+          </div>
+        </section>
+        <section class="right gis">
+          <div class="objs_wrap">
+            <div class="ani"></div>
+            <img src="../assets/img/dt/explain_gis_obj_point.png" class="point" />
+            <ul class="blobs"></ul>
+          </div>
+          <div
+            class="txt_box dark"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
+            <p class="eng_txt">Geographic Information System</p>
+            <p class="main_txt">지리정보시스템(GIS)</p>
+          </div>
+          <div class="con_txt">
+            <p>
+              <b>GIS(Geographic Information System, 지리정보시스템)</b>
+              <br class="pc_br" />지리적(공간적)데이터를 수집, 분석, 시각화하여
+              다양한 분야에서 <br class="pc_br" />활용하는 정보 시스템입니다.
+            </p>
+            <p>
+              단순한 지도 제작을 넘어 위치 기반 데이터 분석과 의사 결정을
+              <br class="pc_br" />지원하는 핵심 기술로, 건설, 교통, 도시 계획,
+              환경 관리, 재난 방지 등 <br class="pc_br" />여러 산업 분야에서
+              필수적으로 활용됩니다.
+            </p>
+            <button class="btn_more" data-value="gis_more">자세히 보기</button>
+          </div>
+        </section>
+        <section class="left twin">
+          <div class="objs_wrap">
+            <video
+              src="../assets/img/dt/explain_twin_obj.mp4"
+              playsinline
+              autoplay
+              muted
+            ></video>
+            <img
+              src="../assets/img/dt/explain_twin_obj_point.png"
+              class="point"
+            />
+            <ul class="blobs"></ul>
+          </div>
+          <div
+            class="txt_box dark"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
+            <p class="eng_txt">Digital Twin</p>
+            <p class="main_txt">디지털트윈(DT)</p>
+          </div>
+          <div class="con_txt">
+            <p>
+              <b>DT(Digital Twin, 디지털트윈)</b>은 <br class="pc_br" />현실
+              세계의 사물, 시스템, 프로세스를 가상의 공간에
+              <br class="pc_br" />동일하게 복제하여 실시간 모니터링, 분석,
+              시뮬레이션을 <br class="pc_br" />수행하는 기술입니다.
+            </p>
+            <p>
+              건물, 공장, 도시, 교량, 인프라 시설 등 물리적 대상과 <br />동일한
+              디지털 복제본을 생성하여 <br />데이터를 실시간으로 연동하고
+              최적화합니다.
+            </p>
+            <button class="btn_more" data-value="twin_more">자세히 보기</button>
+          </div>
+        </section>
+        <section class="end">
+          <p>
+            <b>건설산업에서의 디지털전환(D/X)</b>은 <br /><em
+              >BIM, GIS, 디지털트윈 등 첨단기술의 융복합</em
+            >을 <br />통해서만 실현할 수 있습니다.
+          </p>
+          <div class="objs_wrap" data-aos="fade-down" data-aos-duration="500">
+            <span>Digital Transformation <br /><em>디지털 전환(D/X)</em></span>
+            <img src="../assets/img/dt/explain_end_obj.png" />
+            <ul class="blobs"></ul>
+            <ul class="satellite">
+              <li><div></div></li>
+              <li><div></div></li>
+              <li><div></div></li>
+              <li><div></div></li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <footer id="footer"></footer>
+    </div>
+  </body>
+</html>

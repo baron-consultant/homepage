@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/font.css" />
+    <link rel="stylesheet" href="../assets/css/lib/aos.min.css" type="text/css" />
+    <link rel="stylesheet" href="../assets/css/lib/swiper11.min.css" />
+    <link rel="stylesheet" href="../assets/css/lib/lenis.min.css" />
+
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="../assets/css/recruit.css" />
+    <!-- JS -->
+    <script src="../assets/js/lib/aos.min.js"></script>
+    <script src="../assets/js/lib/lenis.min.js"></script>
+    <script src="../assets/js/lib/jquery-3.6.1.min.js"></script>
+    <script src="../assets/js/lib/swiper11.min.js"></script>
+    <script src="../assets/js/lib/gsap.min.js"></script>
+    <script src="../assets/js/lib/scrolltrigger.min.js"></script>
+    <script src="../assets/js/lib/scrollToPlugin.min.js"></script>
+    <script type="module" src="../assets/js/common.js"></script>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <header id="header_recruit"></header>
+      <div class="container recruit main">
+        <!-- S : intro -->
+        <section class="intro">
+          <div class="txt_box" data-aos="fade-down" data-aos-duration="1000">
+            <div class="tit_wrap">
+              <div class="title">
+                <span>Your Next Big Step,</span>
+                <b>BARON</b>
+              </div>
+              <div class="copy">
+                <span
+                  >당신의 커리어가 <br class="m_br" /><b
+                    >새로운 도약을 시작합니다.</b
+                  ></span
+                >
+              </div>
+            </div>
+            <div class="tit_line"></div>
+            <div class="job">
+              <ul>
+                <li class="engineer">
+                  <a href="recruit_apply.html?cate=engineer">
+                    <div class="tit">
+                      <em>Engineering</em><span>엔지니어</span>
+                    </div>
+                    <div class="count"><em>00</em><span>개</span></div></a
+                  >
+                </li>
+                <li class="developer">
+                  <a href="recruit_apply.html?cate=developer">
+                    <div class="tit"><em>Tech</em><span>개발자</span></div>
+                    <div class="count"><em>00</em><span>개</span></div></a
+                  >
+                </li>
+                <li class="designer">
+                  <a href="recruit_apply.html?cate=designer">
+                    <div class="tit"><em>Design</em><span>디자이너</span></div>
+                    <div class="count"><em>00</em><span>개</span></div></a
+                  >
+                </li>
+                <li class="management">
+                  <a href="recruit_apply.html?cate=management">
+                    <div class="tit">
+                      <em>Corporate</em><span>기획&관리</span>
+                    </div>
+                    <div class="count"><em>00</em><span>개</span></div></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="img_box">
+            <ul>
+              <li>
+                <img src="../assets/img/recruit/recruit_intro_img01.jpg" alt="" />
+              </li>
+              <li>
+                <img src="../assets/img/recruit/recruit_intro_img02.jpg" alt="" />
+              </li>
+              <li>
+                <img src="../assets/img/recruit/recruit_intro_img03.jpg" alt="" />
+              </li>
+              <li>
+                <img src="../assets/img/recruit/recruit_intro_img04.jpg" alt="" />
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- S : sub1 -->
+        <section class="sub1">
+          <div
+            class="recruit_tit"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
+            <b>Step</b><em> into <br class="m_br" />Our Culture</em>
+          </div>
+
+          <div class="tab_wrap" data-aos="fade-up" data-aos-duration="1000">
+            <div class="tabs">
+              <button class="tab" data-tab="tab1">
+                <span>BARON’s Way</span>
+                <em>우리가 나아가는 방향</em>
+              </button>
+              <button class="tab" data-tab="tab2">
+                <span>The way We work</span>
+                <em>다양한 역량, 하나의 흐름</em>
+              </button>
+              <button class="tab active" data-tab="tab3">
+                <span>For the way you work and live</span>
+                <em>잘 일하고, 잘 쉬도록</em>
+              </button>
+            </div>
+            <div class="tab_cnt_wrap">
+              <div id="tab1" class="tab-content active">
+                <img
+                  src="../assets/img/recruit/recruit_sub1_wayobj.png"
+                  alt=""
+                  class="tab_obj"
+                />
+
+                <div class="tab_txt">
+                  <span>Toward the Digital Transformation</span>
+                  <b>건설산업의 디지털 전환을 향한 여정</b>
+                  <p>
+                    인프라시설 전 생애주기 동안 필요한 기술의 디지털 전환을
+                    통해<br />
+                    지속가능한 건설 산업으로의 변화를 꿈꿉니다.
+                  </p>
+                  <button class="way_pop" data-value="way_more">
+                    자세히보기
+                    <img
+                      src="../assets/img/recruit/recruit_sub1_ico_arrow.svg"
+                      alt=""
+                    />
+                  </button>
+                  <!-- 자세히보기 페이지 팝업  -->
+                </div>
+              </div>
+              <div id="tab2" class="tab-content">
+                <img
+                  src="../assets/img/recruit/recruit_sub2_obj.png"
+                  alt=""
+                  class="tab_obj"
+                />
+
+                <div class="tab_txt">
+                  <span>The way We work</span>
+                  <b class="thin">서로 다른 전문가들의 융합을 통해</b>
+                  <b>하나의 목적으로 나아갑니다.</b>
+                  <p>
+                    다양한 전문성을 갖춘 인재들이 모여 시너지를 창출하고,<br />
+                    개인의 성장과 회사의 발전이 하나로 연결되는 동반성장을
+                    실현합니다.<br class="pc_br" />
+                    각자의 강점을 발휘하며 함께 더 높은 목표를 향해 나아갑니다.
+                  </p>
+                  <!-- <div class="way_pop">자세히보기 <img src="../assets/img/recruit/recruit_sub1_ico_arrow.svg" alt=""></div> -->
+                </div>
+              </div>
+              <div id="tab3" class="tab-content">
+                <div class="live">
+                  <ul>
+                    <li class="live_list">
+                      <div class="content">
+                        <div class="tit_box">
+                          <b class="tit num">01</b>
+                          <b class="tit">집중을 위한 공간, 회복을 위한 배려</b>
+                          <span class="txt"
+                            >쾌적한 공간과 균형있는 제도로 업무와<br />휴식의
+                            균형을 맞출 수있도록 지원합니다.</span
+                          >
+                        </div>
+                        <div class="live_cont">
+                          <button class="live_pop" data-value="live_more_1">
+                            내용 확인
+                            <i></i>
+                          </button>
+                          <ul>
+                            <li>
+                              <img
+                                src="../assets/img/recruit/recruit_sub1_live01_ico01.svg"
+                                alt=""
+                              />
+                              <div class="info">
+                                <span>효율적인 업무를 위한</span>
+                                <b>쾌적한 근무환경</b>
+                              </div>
+                            </li>
+                            <li>
+                              <img
+                                src="../assets/img/recruit/recruit_sub1_live01_ico03.svg"
+                                alt=""
+                              />
+                              <div class="info">
+                                <span>연차, 경조사, 육아휴직 등</span>
+                                <b>자유로운 연차제도</b>
+                              </div>
+                            </li>
+                            <li>
+                              <img
+                                src="../assets/img/recruit/recruit_sub1_live01_ico02.svg"
+                                alt=""
+                              />
+                              <div class="info">
+                                <span>일상 속 여유를 위한</span>
+                                <b>다양한 휴게 공간 운영</b>
+                              </div>
+                            </li>
+
+                            <li>
+                              <img
+                                src="../assets/img/recruit/recruit_sub1_live01_ico04.svg"
+                                alt=""
+                              />
+                              <div class="info">
+                                <b>장기근속 포상 제도</b>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="live_list">
+                      <div class="content">
+                        <div class="tit_box">
+                          <b class="tit num">02</b>
+                          <b class="tit">몰입을 위한 끊임없는 지원</b>
+                          <span class="txt"
+                            >성장에 필요한건 의지뿐,<br />기회와 자원은 바론이
+                            지원합니다</span
+                          >
+                        </div>
+                        <div class="live_cont">
+                          <button class="live_pop" data-value="live_more_2">
+                            내용 확인
+                            <i></i>
+                          </button>
+
+                          <ul class="row3">
+                            <li>
+                              <img
+                                src="../assets/img/recruit/recruit_sub1_live02_ico01.svg"
+                                alt=""
+                              />
+                              <div class="info">
+                                <span>언제든 사용할 수 있는 있는</span>
+                                <b>사내 도서관</b>
+                              </div>
+                            </li>
+                            <li>
+                              <img
+                                src="../assets/img/recruit/recruit_sub1_live02_ico02.svg"
+                                alt=""
+                              />
+                              <div class="info">
+                                <span>업무에 필요한</span>
+                                <b>교육과 자기계발 적극 지원</b>
+                              </div>
+                            </li>
+                            <li>
+                              <img
+                                src="../assets/img/recruit/recruit_sub1_live02_ico03.svg"
+                                alt=""
+                              />
+                              <div class="info">
+                                <span>최상의 업무컨디션을 위한</span>
+                                <b>최적 H/W, S/W 지원</b>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="live_list">
+                      <div class="content">
+                        <div class="tit_box">
+                          <b class="tit num">03</b>
+                          <b class="tit">업무 밖의 삶까지 이어질 수 있도록</b>
+                          <span class="txt"
+                            >일할 떄는 몰입하고,<br />쉴때는 온전히 내 삶을 누릴
+                            수 있도록 돕습니다.</span
+                          >
+                        </div>
+                        <div class="live_cont">
+                          <button class="live_pop" data-value="live_more_3">
+                            내용 확인
+                            <i></i>
+                          </button>
+                          <ul>
+                            <li>
+                              <img
+                                src="../assets/img/recruit/recruit_sub1_live03_ico01.svg"
+                                alt=""
+                              />
+                              <div class="info">
+                                <b>사내 헬스장 운영 으로</b>
+                                <span>건강한 루틴 지원</span>
+                              </div>
+                            </li>
+                            <li>
+                              <img
+                                src="../assets/img/recruit/recruit_sub1_live03_ico02.svg"
+                                alt=""
+                              />
+                              <div class="info">
+                                <span>구성원 모두가 즐기는</span>
+                                <b>사내 문화행사</b>
+                              </div>
+                            </li>
+                            <li>
+                              <img
+                                src="../assets/img/recruit/recruit_sub1_live03_ico03.svg"
+                                alt=""
+                              />
+                              <div class="info">
+                                <span>PT, 필라테스 등</span>
+                                <b>건강 프로그램 지원</b>
+                              </div>
+                            </li>
+                            <li>
+                              <img
+                                src="../assets/img/recruit/recruit_sub1_live03_ico04.svg"
+                                alt=""
+                              />
+                              <div class="info">
+                                <b>사내 동호회 <br />& 활동비 지원</b>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="tabs">
+              <button class="tab active" data-tab="tab1">
+                <span>BARON’s Way</span>
+                <em>우리가 나아가는 방향</em>
+              </button>
+              <button class="tab" data-tab="tab2">
+                <span>The way We work</span>
+                <em>다양한 역량, 하나의 흐름</em>
+              </button>
+              <button class="tab" data-tab="tab3">
+                <span>For the way you work and live</span>
+                <em>잘 일하고, 잘 쉬도록</em>
+              </button>
+            </div>
+          </div>
+        </section>
+        <!-- E : sub1 -->
+
+        <!-- S : sub2 -->
+        <section class="sub2">
+          <div
+            class="recruit_tit"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
+            <b>Step</b
+            ><em>
+              by Step,<br class="m_br" />
+              Career Growth</em
+            >
+            <span>당신의 커리어와 바론의 내일이 함께 자랍니다.</span>
+          </div>
+          <div class="recruit_sub_tit">
+            <ul class="blobs"></ul>
+            <div
+              class="growth_copy"
+              data-aos="fade-down"
+              data-aos-duration="1000"
+            >
+              <span>바론은 빠르게 성장하는 회사이지만,</span>
+              <em
+                >‘사람’과 함께 성장하지 않으면 아무 의미가
+                <br class="m_br" />없다고 생각합니다.</em
+              >
+              <b
+                >그래서 바론은 ‘회사의 성장’과 <br class="m_br" />‘개인의
+                성장’을 함께 설계합니다.</b
+              >
+            </div>
+          </div>
+
+          <div class="review_wrap">
+            <div data-aos="fade-up" data-aos-duration="1000">
+              <div class="review_slider">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide">
+                    <div class="profile_box">
+                      <div class="review">
+                        <div>
+                          <div class="word_open">
+                            <img
+                              src="../assets/img/recruit/recruit_sub2_ico_wordopen.svg"
+                              alt=""
+                            />
+                          </div>
+                          <span
+                            >처음에는 따라갔지만<br />이제는 만들어가고
+                            있습니다.</span
+                          >
+                          <div class="word_close">
+                            <img
+                              src="../assets/img/recruit/recruit_sub2_ico_wordclose.svg"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="profile">
+                        <img
+                          class="img"
+                          src="../assets/img/recruit/recruit_sub2_profile01.png"
+                          alt=""
+                        />
+                        <div class="txt">
+                          <span class="name">A 선임 연구원</span>
+                          <span class="job">구조물 설계 엔지니어</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="review_box">
+                      <dl>
+                        <dt>
+                          <span>Q</span> 회사와 함께 성장한다고 느끼시나요?
+                        </dt>
+                        <dd>
+                          <p>
+                            저는 곧 입사 2년을 앞두고 있어요. 짧은 시간이라
+                            생각해요.<br class="pc_br" />
+                            그래서 솔직히 그간 저의 기술적인 성장이 있었다고는
+                            대답하기 어렵습니다.
+                          </p>
+                          <p>
+                            하지만 한가지 확실한건 일하는 방식은 성장했다고
+                            생각해요.<br class="pc_br" />
+                            우리가 목표하는 핵심가치를 계속해서 공유하고 그와
+                            관련된 다양한 프로그램을 구성하는 능력이 생겼습니다.
+                          </p>
+                          <p>
+                            입사 후 목표의식 없이 선배들을 따라했던 때가
+                            있었는데 이제는 제 업무의 가치나 방식을 제가 만들어
+                            가고 있어요.
+                          </p>
+                        </dd>
+                      </dl>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="profile_box">
+                      <div class="review">
+                        <div>
+                          <div class="word_open">
+                            <img
+                              src="../assets/img/recruit/recruit_sub2_ico_wordopen.svg"
+                              alt=""
+                            />
+                          </div>
+                          <span>코더로 남고싶은<br />개발자는 없잖아요.</span>
+                          <div class="word_close">
+                            <img
+                              src="../assets/img/recruit/recruit_sub2_ico_wordclose.svg"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="profile">
+                        <img
+                          class="img"
+                          src="../assets/img/recruit/recruit_sub2_profile02.png"
+                          alt=""
+                        />
+                        <div class="txt">
+                          <span class="name">K 연구원</span>
+                          <span class="job">웹 개발</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="review_box center">
+                      <dl>
+                        <dt>
+                          <span>Q</span> 우리회사에서 개발자로 일한다는 것은
+                          어떤 의미인가요?
+                        </dt>
+                        <dd>
+                          <p>
+                            제가 처음 개발을 시작할 때는 선배들이 영어타이핑이
+                            얼마나 빠른지 내기하고 그랬어요.<br class="pc_br" />
+                            웃긴일이죠. 영타가 빠르다고 좋은 개발자는
+                            아니잖아요. 저는 사실 언제까지나 '개발자'로 일하고
+                            싶거든요.<br />
+                          </p>
+                          <p>
+                            AI가 코드를 다 짜주는 요즘같은 세상에서 코더로
+                            도태되고 싶지 않아요. 그런면에서 저는 운이
+                            좋은편이에요. <br class="pc_br" />
+                            많은 종류의 데이터를 설계하고, 개발 페러다임을
+                            겪으며 몇단계 성장했습니다. <br />
+                          </p>
+                          <p>
+                            저는 요즘 게임엔진에 대해 공부하면서 관련 프로젝트도
+                            제안하고 있는데요. <br class="pc_br" />
+                            '웹개발자가 무슨 엔진이야' 할 수 있지만 이런 새로운
+                            시도, 창의적 도전이 제가 좋은 개발자가 되는 길이라고
+                            확신해요.
+                          </p>
+                        </dd>
+                      </dl>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="profile_box">
+                      <div class="review">
+                        <div>
+                          <div class="word_open">
+                            <img
+                              src="../assets/img/recruit/recruit_sub2_ico_wordopen.svg"
+                              alt=""
+                            />
+                          </div>
+                          <span
+                            >방향이 잘 맞는다면<br />속도는 그 다음문제라고<br />생각해요.</span
+                          >
+                          <div class="word_close">
+                            <img
+                              src="../assets/img/recruit/recruit_sub2_ico_wordclose.svg"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="profile">
+                        <img
+                          class="img"
+                          src="../assets/img/recruit/recruit_sub2_profile03.png"
+                          alt=""
+                        />
+                        <div class="txt">
+                          <span class="name">L 선임 연구원</span>
+                          <span class="job">경영관리</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="review_box center">
+                      <dl>
+                        <dt>
+                          <span>Q</span> 동반성장을 위해 가장 중요하다고
+                          생각하는 것은 무엇인가요?
+                        </dt>
+                        <dd>
+                          <p>
+                            내가 배울것이 남아있고, 물어보는 것을 부끄러워하지
+                            않는 것이 가장 중요하다고 생각해요.<br
+                              class="pc_br"
+                            />
+                            이곳은 우리가 부족한 많은 것들을 채워줄 수
+                            있거든요.<br />
+                          </p>
+
+                          <p>
+                            시간이 부족하다면 시간을 더 줄 수 있고, 정보가
+                            부족하다면 필요한 정보를 알려줄 수 있어요.
+                            <br class="pc_br" />이런 수고들을 '헛수고' 라고
+                            생각하지 않고 올바른 방향을 잡아가는 일이라고
+                            생각해요.
+                          </p>
+                        </dd>
+                      </dl>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="profile_box">
+                      <div class="review">
+                        <div>
+                          <div class="word_open">
+                            <img
+                              src="../assets/img/recruit/recruit_sub2_ico_wordopen.svg"
+                              alt=""
+                            />
+                          </div>
+                          <span
+                            >다들 발전하는데<br />나만 가만히 있을수<br />없잖아요?</span
+                          >
+                          <div class="word_close">
+                            <img
+                              src="../assets/img/recruit/recruit_sub2_ico_wordclose.svg"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="profile">
+                        <img
+                          class="img"
+                          src="../assets/img/recruit/recruit_sub2_profile04.png"
+                          alt=""
+                        />
+                        <div class="txt">
+                          <span class="name">C 선임 연구원</span>
+                          <span class="job">BIM모델설계 엔지니어</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="review_box center">
+                      <dl>
+                        <dt>
+                          <span>Q</span> 어떤 순간이 당신을 레벨업 시켰나요?
+                        </dt>
+                        <dd>
+                          <p>
+                            저는 BIM불모지인 한국에서 나름 상위권에 있는
+                            엔지니어라고 생각했는데 이곳에 와서 그 생각이 완전히
+                            달라졌어요. <br />
+                          </p>
+                          <p>
+                            프로그램을 다루거나 모델을 잘 만드는 것만으로는
+                            안되겠더라고요. <br class="pc_br" />업무에 대한
+                            깊이있는 이해를 위해 노력하고 있습니다.<br />
+                          </p>
+                          <p>
+                            일을 진지하게 대하게 된 것 같아요. 아 성장동력은..
+                            그런말이 있더라고요. 주변 지인, 환경을 돌아봤을 때
+                            배울점이 없다면 과감히 탈출하라!
+                            <br class="pc_br" />팀원들이 성장하는데 발목잡는
+                            선배가 될 수는 없잖아요.
+                          </p>
+                        </dd>
+                      </dl>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="profile_box">
+                      <div class="review">
+                        <div>
+                          <div class="word_open">
+                            <img
+                              src="../assets/img/recruit/recruit_sub2_ico_wordopen.svg"
+                              alt=""
+                            />
+                          </div>
+                          <span
+                            >나는 어떻게<br />문제를 푸는 사람이<br />되었는가.</span
+                          >
+                          <div class="word_close">
+                            <img
+                              src="../assets/img/recruit/recruit_sub2_ico_wordclose.svg"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="profile">
+                        <img
+                          class="img"
+                          src="../assets/img/recruit/recruit_sub2_profile05.png"
+                          alt=""
+                        />
+                        <div class="txt">
+                          <span class="name">K 책임 연구원</span>
+                          <span class="job">그래픽 엔진 개발</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="review_box right">
+                      <dl>
+                        <dt>
+                          <span>Q</span> 어떤 순간이 당신을 레벨업 시켰나요?
+                        </dt>
+                        <dd>
+                          <p>
+                            다른 직무와 협업하게 되면 '이정도면 됐다' 라는
+                            피드백을 받거나 생각을 할 때가 있어요. <br />
+                          </p>
+                          <p>
+                            함께 일하면서 어느정도 서로의 직무를 파악했지만
+                            완벽하게 알지는 못해서 발생하는 일이라 생각해요.<br />
+                          </p>
+                          <p>
+                            그 때 '아니 이게요? 더 잘할 수 있는데' 라고 말하면서
+                            서로의 상상을, 서로의 문제를 해결해주는 경험을
+                            하고는 합니다. <br />성과로 보면 하나의 성공
+                            케이스이지만 그런 순간들이 모이면 제 능력이 레벨업
+                            된다고 생각해요.
+                          </p>
+                        </dd>
+                      </dl>
+                    </div>
+                  </li>
+                </ul>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- E : sub2 -->
+        <!-- s : sub3 -->
+        <section class="sub3">
+          <div class="sub3_wrap">
+            <div
+              class="recruit_tit"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
+              <b>Step</b><em> In</em>
+              <span>합류여정</span>
+            </div>
+            <div class="step_in">
+              <ul data-aos="fade-up" data-aos-duration="1000">
+                <li>
+                  <div class="tit_wrap">
+                    <div class="step">Step.01</div>
+                    <div class="tit">
+                      <img
+                        src="../assets/img/recruit/recruit_sub3_ico_step01.svg"
+                        alt=""
+                      />
+                      <b>지원서접수</b>
+                    </div>
+                  </div>
+                  <span class="txt">
+                    메일, 또는 채용포털을 통해 이력서를 제출해 주세요.<br />
+                    경력기술서나 포트폴리오가 있다면 함께 첨부해 주세요.
+                  </span>
+                </li>
+                <li>
+                  <div class="tit_wrap">
+                    <div class="step">Step.02</div>
+                    <div class="tit">
+                      <img
+                        src="../assets/img/recruit/recruit_sub3_ico_step02.svg"
+                        alt=""
+                      />
+                      <b>서류 검토</b>
+                    </div>
+                  </div>
+                  <span class="txt">
+                    지원서에 담긴 경험과 역량을 바탕으로 면접 여부를
+                    결정합니다.<br />
+                    충실히 작성해 주실수록 기회가 가까워 집니다.
+                  </span>
+                </li>
+                <li>
+                  <div class="tit_wrap">
+                    <div class="step">Step.03</div>
+                    <div class="tit">
+                      <img
+                        src="../assets/img/recruit/recruit_sub3_ico_step03.svg"
+                        alt=""
+                      />
+                      <b>실무 면접</b>
+                    </div>
+                  </div>
+                  <span class="txt">
+                    현업 담당자와 함께 직무 이해도, 경험 등 업무 역량부터<br />
+                    커뮤니케이션 능력, 가치관 등 다양한 주제를 중심으로
+                    대화합니다.
+                  </span>
+                </li>
+                <li>
+                  <div class="tit_wrap">
+                    <div class="step">Step.04</div>
+                    <div class="tit">
+                      <img
+                        src="../assets/img/recruit/recruit_sub3_ico_step04.svg"
+                        alt=""
+                      />
+                      <b>심층 면접</b>
+                    </div>
+                  </div>
+                  <span class="txt">
+                    필요시 추가 심층 면접을 진행합니다.<br />
+                    주로 조직 문화 적합성과 미래 비전 등을 중심으로 대화합니다.
+                  </span>
+                </li>
+                <li>
+                  <div class="tit_wrap">
+                    <div class="step">Step.05</div>
+                    <div class="tit">
+                      <img
+                        src="../assets/img/recruit/recruit_sub3_ico_step05.svg"
+                        alt=""
+                      />
+                      <b>최종 합격</b>
+                    </div>
+                  </div>
+                  <span class="txt">
+                    최종 합격 후 입사 일정과 필요한 안내를 드립니다.<br />
+                    새로운 시작을 위한 준비를 함께합니다.
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <!-- E : sub3 -->
+      </div>
+      <footer id="footer"></footer>
+    </div>
+    <script type="module" src="../assets/js/recruit.js"></script>
+  </body>
+</html>

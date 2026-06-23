@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- ASSETS -->
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/font.css" />
+    <link rel="stylesheet" href="../assets/css/lib/aos.min.css" />
+    <link rel="stylesheet" href="../assets/css/lib/lenis.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="../assets/js/lib/aos.min.js"></script>
+    <script src="../assets/js/lib/lenis.min.js"></script>
+    <script src="../assets/js/lib/jquery-3.6.1.min.js"></script>
+    <!-- script src="../assets/js/lib/jquery.mousewheel.min.js"></script -->
+    <script src="../assets/js/lib/gsap.min.js"></script>
+    <script src="../assets/js/lib/scrolltrigger.min.js"></script>
+    <script src="../assets/js/lib/scrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <!-- CSS / JS -->
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="../assets/css/dx.css" />
+    <script type="module" src="../assets/js/common.js"></script>
+    <script type="module" src="../assets/js/dx.js?v=20260623-dximg"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <header id="header" class="open"></header>
+      <ul class="map_list"></ul>
+      <div class="container dx">
+        <section class="contents_wrap">
+          <div class="list_wrap">
+            <dl class="tit">
+              <dt>건설산업의 <em>디지털전환 체험하기</em></dt>
+              <dd>
+                Experience Digital Transformation <br class="m_br" />in Infra
+                Construction
+              </dd>
+            </dl>
+            <ul class="tab_menu" style="display: none">
+              <li class="on"><em>포스터</em>Poster</li>
+              <li><em>동영상</em>Video</li>
+            </ul>
+
+            <div class="tab_item_list">
+              <div class="swiper filter_slide">
+                <div class="swiper-wrapper filter">
+                  <div class="swiper-slide on" data-category="a"></div>
+                  <div class="swiper-slide" data-category="b"></div>
+                  <div class="swiper-slide" data-category="c"></div>
+                  <div class="swiper-slide" data-category="d"></div>
+                  <div class="swiper-slide" data-category="e"></div>
+                  <div class="swiper-slide" data-category="f"></div>
+                </div>
+              </div>
+
+              <div class="swiper thumbListSwiper img">
+                <div class="swiper-wrapper" id="p-thumb"></div>
+                <div class="swiper-scrollbar"></div>
+              </div>
+            </div>
+
+            <div class="tab_item_list" style="display: none">
+              <div class="swiper thumbListSwiper vod">
+                <div class="swiper-wrapper" id="v-thumb"></div>
+                <div class="swiper-scrollbar"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide_wrap">
+            <div class="btn_wrap">
+              <button class="btn_close" type="button">DX체험 리스트</button>
+            </div>
+
+            <div class="swiper mainSwiper img">
+              <div class="swiper-wrapper" id="p-main"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+            <div class="swiper thumbSwiper img">
+              <div class="swiper-wrapper" id="p-thumb-main"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+            <div class="swiper mainSwiper vod" style="display: none">
+              <div class="swiper-wrapper" id="v-main"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+
+            <div class="swiper thumbSwiper vod">
+              <div class="swiper-wrapper" id="v-thumb-main"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer id="footer"></footer>
+    </div>
+  </body>
+</html>

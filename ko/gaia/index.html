@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EEDBRC8DL5"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'G-EEDBRC8DL5');
+  </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GAIA</title>
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/font.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+
+  <meta property="og:title" content="GAIA">
+  <meta property="og:description" content="스마트 건설 플랫폼 GAIA">
+  <meta property="og:image" content="http://k-gaia.co.kr/gaia/img/og-main-thumb.JPG">
+  <meta property="og:url" content="http://k-gaia.co.kr/">
+  <meta property="og:type" content="website">
+
+  <!-- SEO Meta Tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="지반정보 시추조사 프로그램" />
+  <meta name="keywords" content="시추공, 위치정보, 도로선형 정보, 지반정보, 시추주상도, 암반구간, 절리형상, 성과품 자동생성, gaia, k-gaia, 가이아, 삼안, 한맥, 바론컨설턴트" />
+  <meta name="naver-site-verification" content="df53cd37c9a36be907a939041e767321bec7b1d4" />
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" type="text/css" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.9/dist/lenis.css">
+  <script type="text/javascript" src="./js/jquery-3.6.1.min.js"></script>
+  <script type="text/javascript" src="./js/jquery.mousewheel.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+  <script src="/baron/assets/js/egbim-baron-shell.js?v=20260623h"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    window.initProductBaronShell?.('gaia', 'ko');
+  });
+  </script>
+  <script type="text/javascript" src="./js/index.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+<div class="main_mask">
+      <!-- main -->
+      <div class="main">
+        <ul class="pagination_main">
+          <li>
+            <div class="page_01 page_on">
+              <font class="gaia w">GAIA </font>&nbsp소개
+            </div><span>01</span>
+          </li>
+          <li>
+            <div class="page_02">주요기능</div><span>02</span>
+          </li>
+          <li>
+            <div class="page_03">성과품</div><span>03</span>
+          </li>
+          <li>
+            <div class="page_04">디지털 혁신</div><span>04</span>
+          </li>
+          <li>
+            <div class="page_05">구매하기</div><span>05</span>
+          </li>
+        </ul>
+        <div class="main_link">
+          <a href="#01" class="main_link_01 link_on" onclick="location.href='./value.html'"></a>
+          <a href="#02" class="main_link_02" onclick="location.href='./primary.html'"></a>
+          <a href="#03" class="main_link_03" onclick="location.href='./results.html'"></a>
+          <a href="#04" class="main_link_04" onclick="location.href='./further.html'"></a>
+          <a href="#05" class="main_link_05" onclick="location.href='./buy.html'"></a>
+        </div>
+        <div class="bg_video">
+          <video id="video_play" autoplay muted playsinline>
+            <source src="./img/main_1.mp4" type="video/mp4" class="main_video_01">
+          </video>
+        </div>
+      </div>
+    </div>
+    <div class="intro_wrap">
+      <div class="intro_mask"></div>
+      <div class="intro_txt">
+        <div class="txt_mask"><span>아날로그를 넘어,</span></div>
+        <div class="txt_mask"><span><em>시추조사의 디지털 혁신</em></span></div>
+        <div class="txt_mask"><span>
+            <font class="gaia k">GAIA</font>가 함께합니다
+          </span></div>
+      </div>
+    </div>
+  </div>
+  <script>
+  AOS.init();
+
+  const lenis = new Lenis()
+  lenis.on('scroll', (e) => {
+    // console.log(e)
+  })
+  lenis.on('scroll', ScrollTrigger.update)
+  gsap.ticker.add((time) => {
+    lenis.raf(time * 1000)
+  })
+  gsap.ticker.lagSmoothing(0)
+  </script>
+</body>
+
+</html>

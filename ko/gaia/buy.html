@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EEDBRC8DL5"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'G-EEDBRC8DL5');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>구매하기</title>
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/font.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" type="text/css" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.9/dist/lenis.css">
+  <script type="text/javascript" src="./js/jquery-3.6.1.min.js"></script>
+  <script type="text/javascript" src="./js/jquery.mousewheel.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+  <script src="/baron/assets/js/egbim-baron-shell.js?v=20260623h"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    window.initProductBaronShell?.('gaia', 'ko');
+  });
+  </script>
+</head>
+
+<body>
+  <div class="wrapper">
+<!-- 컨텐츠 시작 -->
+    <div class="container buy">
+      <section class="intro">
+        <div class="top">
+          <h2 data-aos="fade-down" data-aos-duration="1000">구매하기</h2>
+          <span>GAIA 구매문의 및 제품 안내</span>
+        </div>
+      </section>
+      <section class="contents_wrap" id="contact">
+        <div class="video_area" data-aos="fade-right" data-aos-duration="1000">
+          <video autoplay muted loop playsinline>
+            <source src="./img/buy_video.mp4">
+          </video>
+        </div>
+        <div class="download_area">
+          <span class="mid_tit">
+            <font class="gaia k">GAIA</font>로 건설현장에<br> <em>디지털 전환</em>을 도입하세요
+          </span>
+          <span class="sub_text">라이센스 중복 시 <em>
+              <font style="color: var(--color-accent)">이용이 제한</font>
+            </em>될 수 있습니다.</span>
+          <a class="gra btn_download" href="mailto:baroncs@baroncs.co.kr"><i></i>GAIA 구매문의</a>
+          <a href="./download/GAIA_leaflet.pdf" download class="gra btn_brochure"><i></i>브로슈어</a>
+        </div>
+        <div class="contact_area">
+          <span class="sub_tit">구매 문의</span>
+          <span class="sub_text">GAIA 담당자에게 직접 문의하기</span>
+          <ul>
+            <li class="tel"><i></i>02 - 2141 - 7448</li>
+            <li class="mail"><i></i>baroncs@baroncs.co.kr</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <!-- //컨텐츠 시작 -->
+  </div>
+
+  <script>
+  AOS.init();
+
+  const lenis = new Lenis()
+  lenis.on('scroll', (e) => {
+    // console.log(e)
+  })
+  lenis.on('scroll', ScrollTrigger.update)
+  gsap.ticker.add((time) => {
+    lenis.raf(time * 1000)
+  })
+  gsap.ticker.lagSmoothing(0)
+  </script>
+</body>
+
+
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>영상 포트폴리오</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .video-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            background: #000;
+        }
+
+        /* YouTube 배경 비디오 래퍼 */
+        .video-background {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            translate: -50% -50%;
+            max-width: 1920px;
+            overflow: hidden;
+        }
+
+        .video-background iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100vw;
+            height: 56.25vw; /* 16:9 비율 */
+            min-height: 100vh;
+            min-width: 177.78vh; /* 16:9 비율 */
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+
+        /* Fullscreen API: 위 .video-background / iframe 커버 레이아웃 해제 */
+        .is-dom-fullscreen .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            max-width: none;
+            translate: none;
+            overflow: visible;
+            translate: 0% 0%;
+        }
+
+        /* 배경 위 어두운 오버레이 (선택, 텍스트 가독성용) */
+        .video-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.35);
+            z-index: -1;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #fff;
+            margin-bottom: 20px;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+        }
+
+        /* 재생/일시정지, 음소거 버튼 공통 */
+        .video-controls {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            display: none;
+        }
+        .play-btn,
+        .mute-btn {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            border: 3px solid rgba(255,255,255,0.9);
+            background: rgba(0,0,0,0.5);
+            color: #fff;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s, transform 0.15s;
+        }
+        .play-btn:hover,
+        .mute-btn:hover {
+            background: rgba(0,0,0,0.7);
+            transform: scale(1.05);
+        }
+        .play-btn svg,
+        .mute-btn svg {
+            width: 26px;
+            height: 26px;
+        }
+        .play-btn.paused svg.play-icon { display: block; }
+        .play-btn.paused svg.pause-icon { display: none; }
+        .play-btn:not(.paused) svg.play-icon { display: none; }
+        .play-btn:not(.paused) svg.pause-icon { display: block; }
+        .mute-btn.muted svg.volume-on { display: none; }
+        .mute-btn.muted svg.volume-off { display: block; }
+        .mute-btn:not(.muted) svg.volume-on { display: block; }
+        .mute-btn:not(.muted) svg.volume-off { display: none; }
+    </style>
+</head>
+<body>
+    <div class="video-wrap">
+        <!-- YouTube 배경 영상 (API로 제어) -->
+        <div id="yt-background" class="video-background"></div>
+        <!--div class="video-overlay" aria-hidden="true"></div -->
+
+        <div class="video-controls">
+            <button type="button" class="mute-btn muted" id="muteBtn" aria-label="음소거 해제/적용">
+                <svg class="volume-on" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                </svg>
+                <svg class="volume-off" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
+                </svg>
+            </button>
+            <button type="button" class="play-btn paused" id="playBtn" aria-label="재생/일시정지">
+                <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+                <svg class="pause-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script>
+         (function () {
+            function syncDomFullscreenClass() {
+                var el = document.fullscreenElement
+                    || document.webkitFullscreenElement
+                    || document.mozFullScreenElement;
+                document.documentElement.classList.toggle('is-dom-fullscreen', !!el);
+            }
+            document.addEventListener('fullscreenchange', syncDomFullscreenClass);
+            document.addEventListener('webkitfullscreenchange', syncDomFullscreenClass);
+            document.addEventListener('mozfullscreenchange', syncDomFullscreenClass);
+            syncDomFullscreenClass();
+        })();
+
+        var player;
+        var playBtn = document.getElementById('playBtn');
+        var muteBtn = document.getElementById('muteBtn');
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('yt-background', {
+                videoId: '_7O9IfJAXwE',
+                playerVars: {
+                    autoplay: 1,
+                    mute: 1,
+                    loop: 1,
+                    playlist: '_7O9IfJAXwE',
+                    controls: 1,
+                    showinfo: 0,
+                    rel: 0,
+                    modestbranding: 1,
+                    playsinline: 1,
+                    vq: 'hd1080'  // 화질 설정 추가
+                },
+                events: {
+                    onReady: function() {
+                        playBtn.classList.remove('paused');
+                        muteBtn.classList.add('muted');
+                    }
+                }
+            });
+        }/*
+
+        playBtn.addEventListener('click', function() {
+            if (!player || !player.getCurrentTime) return;
+            if (player.getPlayerState() === YT.PlayerState.PLAYING) {
+                player.pauseVideo();
+                playBtn.classList.add('paused');
+            } else {
+                player.playVideo();
+                playBtn.classList.remove('paused');
+            }
+        });
+
+        muteBtn.addEventListener('click', function() {
+            if (!player || !player.getCurrentTime) return;
+            if (player.isMuted()) {
+                player.unMute();
+                muteBtn.classList.remove('muted');
+                muteBtn.setAttribute('aria-label', '음소거');
+            } else {
+                player.mute();
+                muteBtn.classList.add('muted');
+                muteBtn.setAttribute('aria-label', '음소거 해제');
+            }
+        });*/
+    </script>
+</body>
+</html>

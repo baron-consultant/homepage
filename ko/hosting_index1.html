@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="8BoZWWHDiQBRwJ8hue0jKiAho7ck3C0Akk4Z5_2xSeE" />
+    <meta name="naver-site-verification" content="d8fb6628b66c1759645c85e8b9a8edc0916ec8bf" />
+    
+    <title>Coming Soon</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: #f3f4f6;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            z-index: 1;
+            position: relative;
+        }
+
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.5;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #333;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #666;
+        }
+    </style>
+	<script>
+	
+	// if(location.hostname == 'baroncs.co.kr' || location.hostname == 'www.baroncs.co.kr'){
+    // 	window.location.href = 'https://baroncs.co.kr/ko/index.html'
+	// }
+	// alert(location.hostname);
+    window.addEventListener("DOMContentLoaded", () => {
+        const host = location.hostname;
+        if (host === "baroncs.co.kr" || host === "www.baroncs.co.kr") {
+            location.replace("https://baroncs.co.kr/ko/index.html");
+        }
+    });
+	</script>
+</head>
+<body>
+    <div class="container">
+        <img src="warning.png" alt="경고">
+        <h1>서비스 오픈 준비 중입니다.</h1>
+        <p>Sorry, the website is under construction</p>
+    </div>
+    <img src="traffic_image.jpg" alt="도로 교통 이미지" class="background-image">
+</body>
+</html>

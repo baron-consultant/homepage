@@ -1,0 +1,40 @@
+name: Deploy Baron To Cloudflare R2
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure AWS CLI environment for R2
+        run: |
+          echo "AWS_ACCESS_KEY_ID=${{ secrets.CF_R2_ACCESS_KEY_ID }}" >> $GITHUB_ENV
+          echo "AWS_SECRET_ACCESS_KEY=${{ secrets.CF_R2_SECRET_ACCESS_KEY }}" >> $GITHUB_ENV
+          echo "AWS_DEFAULT_REGION=auto" >> $GITHUB_ENV
+          echo "R2_ACCOUNT_ID=${{ secrets.CF_R2_ACCOUNT_ID }}" >> $GITHUB_ENV
+          echo "R2_BUCKET=${{ secrets.CF_R2_BUCKET }}" >> $GITHUB_ENV
+
+      - name: Verify AWS CLI
+        run: aws --version
+
+      - name: Sync Baron site to Cloudflare R2
+        run: |
+          aws s3 sync ./ s3://$R2_BUCKET \
+            --endpoint-url https://$R2_ACCOUNT_ID.r2.cloudflarestorage.com \
+            --delete \
+            --exclude ".git/*" \
+            --exclude ".github/*" \
+            --exclude "*.md"
+
+      - name: Deployment summary
+        run: |
+          echo "Deployed repository root to Cloudflare R2 bucket: $R2_BUCKET"
+          echo "R2 endpoint: https://$R2_ACCOUNT_ID.r2.cloudflarestorage.com"

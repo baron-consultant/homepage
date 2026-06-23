@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- ASSETS -->
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/font.css" />
+    <link rel="stylesheet" href="../assets/css/lib/aos.min.css" />
+    <link rel="stylesheet" href="../assets/css/lib/lenis.min.css" />
+    <script src="../assets/js/lib/aos.min.js"></script>
+    <script src="../assets/js/lib/lenis.min.js"></script>
+    <script src="../assets/js/lib/jquery-3.6.1.min.js"></script>
+    <script src="../assets/js/lib/gsap.min.js"></script>
+    <script src="../assets/js/lib/scrolltrigger.min.js"></script>
+    <script src="../assets/js/lib/scrollToPlugin.min.js"></script>
+    <!-- CSS / JS -->
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/eng/common.css" />
+    <link rel="stylesheet" href="../assets/css/eng/baron.css" />
+    <script type="module" src="../assets/js/eng/common.js"></script>
+    <script src="../assets/js/br.js"></script>
+
+        <!--영문작업중 스타일 수정-->
+    <style>
+    .br.tech section.sub1 .solutions_wrap ul.sw_txt li.sub{text-align: right;}
+    .br.tech section.sub1 .solutions_wrap ul li.sub{text-align: left;}
+    .br.tech section.sub3 ul.step_wrap > li ul.imgs_wrap > li span{font-size: 12px; line-height: 12px;}
+    .br.tech section.sub4 .benefits{display: flex; align-items: center; justify-content: flex-start; margin-top: 40px; flex-wrap: wrap; flex-direction: row; gap: 40px;}
+    .br.tech section.sub4 .benefits li{width: 268px;}
+    .br.value section.sub1 .column_wrap li{justify-content: flex-start;}
+    .br.value section.sub3 .card_wrap li span{text-align: center;}
+
+    </style>
+
+  </head>
+  <body>
+    <div class="wrap">
+      <header id="header"></header>
+      <ul class="map_list"></ul>
+      <div class="container br value">
+        <!-- S : intro -->
+        <section class="intro">
+          <div class="txt_box" data-aos="fade-down" data-aos-duration="1000">
+            <p class="sub_txt">Corporate Philosophy</p>
+           
+            <p class="main_txt">
+              With <span class="tech">Technology</span>, let’s make
+              <span class="human">Human</span>&<span class="nature"> Nature</span
+              ><br>come together
+            </p>
+          </div>
+        </section>
+        <!-- E : intro -->
+        <div class="bg"></div>
+        <!-- S : sub1 -->
+        <section class="sub1">
+          <ul class="column_wrap">
+            <li class="tech">
+              <div class="icon_wrap">
+                <img src="../assets/img/br/value_sub1_ico1.svg" />
+                <img
+                  src="../assets/img/br/value_sub1_ico1_line.svg"
+                  class="bg_line"
+                />
+                <i class="dot l"></i>
+                <i class="dot r"></i>
+                <p>Technology (Digital)</p>
+              </div>
+              <p>
+                <span class="tit"
+                  ><em>技</em>Deep Foundational Knowledge<br class="pc_br" />
+                  in Construction and Civil Engineering</span>
+                Possession of High Expertise Based on<br>
+                Fundamental Understanding and<br>
+                Experience Across All Construction Phases
+              </p>
+              <p>
+                <span class="tit"
+                  ><em>術</em>High-Level Software Technology<br class="pc_br" />
+                  (Digital Technology)</span>
+                Effective Integration of Diverse<br />Technological Tools (S/W, H/W) and Processes
+              </p>
+            </li>
+            <li class="line"></li>
+            <li class="human">
+              <div class="icon_wrap">
+                <img src="../assets/img/br/value_sub1_ico2.svg" />
+                <img
+                  src="../assets/img/br/value_sub1_ico2_line.svg"
+                  class="bg_line"
+                />
+                <i class="dot l"></i>
+                <i class="dot r"></i>
+                <p>People (Competency)</p>
+              </div>
+              <p>
+                <span class="tit"
+                  ><em>人</em>Engineers/Technicians<br class="pc_br" />
+with Expertise in Various Fields</span
+                >
+                Accumulation of Knowledge Fusing<br> Engineering Know-how and Digital<br> Knowledge
+              </p>
+              <p>
+                <span class="tit"
+                  ><em>材</em>Developers with Strong<br class="pc_br" />
+Digitalization Competency and<br class="pc_br" /> Extensive Development Experience</span
+                >
+                Developers Capable of Creating<br> Diverse Solution Software
+              </p>
+            </li>
+            <li class="line"></li>
+            <li class="nature">
+              <div class="icon_wrap">
+                <img src="../assets/img/br/value_sub1_ico3.svg" />
+                <img
+                  src="../assets/img/br/value_sub1_ico3_line.svg"
+                  class="bg_line"
+                />
+                <i class="dot l"></i>
+                <i class="dot r"></i>
+                <p>Nature (Conditions)</p>
+              </div>
+              <p>
+                <span class="tit"
+                  ><em>天</em>Acceptable Conditions/Circumstances<br class="pc_br" />
+                   for Society, Businesses, and Systems</span
+                >
+                Shifting from Goal-Setting Guidelines to<br> Implementation through Case Studies and<br> Effectiveness Verification
+              </p>
+              <p>
+                <span class="tit"
+                  ><em>地</em>Capacity and Will to Undertake<br class="pc_br" /> Continuous and Long-Term Investment</span
+                >
+                Large-Scale Investment for Technology <br>Development and Continuous<br>Investment for Process Innovation
+              </p>
+            </li>
+          </ul>
+        </section>
+        <!-- E : sub1 -->
+        <!-- S : sub2 -->
+        <section class="sub2">
+          <div
+            class="txt_box dark"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
+            <p class="main_txt">Our Value</p>
+            <p class="sub_txt">
+              We realize sustainable growth by transforming the paradigm <br>
+of the construction industry through specialized construction engineering technologies and tools, <br>
+and by fostering people-centric talent.
+            </p>
+          </div>
+          <ol class="circle_wrap">
+            <li
+              class="tech"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="200"
+            >
+              <span><em>First<br> Mover</em></span>
+              <ul class="dots_wrap">
+                <li></li>
+                <li></li>
+              </ul>
+            </li>
+            <li class="human" data-aos="fade-up" data-aos-duration="1000">
+              <span><em>Human<br> Resource</em></span>
+              <ul class="dots_wrap">
+                <li></li>
+                <li></li>
+              </ul>
+            </li>
+            <li
+              class="nature"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="400"
+            >
+              <span><em>Harmony<br> with Nature</em></span>
+              <ul class="dots_wrap">
+                <li></li>
+                <li></li>
+              </ul>
+            </li>
+          </ol>
+        </section>
+        <!-- E : sub2 -->
+        <!-- S : sub3 -->
+        <section class="sub3">
+          <div
+            class="txt_box dark"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
+            <p class="main_txt">Action Plan</p>
+            <p class="sub_txt">
+             We innovate the essence of the construction industry<br>through Super-Gap Technology, challenging spirit, trust, and collaboration,<br>
+and contribute to the sustainable construction sector as an agile enterprise.
+            </p>
+          </div>
+          <ul class="card_wrap">
+            <li data-aos="fade-down" data-aos-duration="1000">
+              <img src="../assets/img/br/value_sub3_plan1.jpg" /><span
+                >Super-Gap <br class="m_br">Technology</span
+              >
+            </li>
+            <li
+              data-aos="fade-down"
+              data-aos-duration="1000"
+              data-aos-delay="200"
+            >
+              <img src="../assets/img/br/value_sub3_plan2.jpg" /><span
+                >Challenge<br>
+& Innovation</span
+              >
+            </li>
+            <li
+              data-aos="fade-down"
+              data-aos-duration="1000"
+              data-aos-delay="400"
+            >
+              <img src="../assets/img/br/value_sub3_plan3.jpg" /><span
+                >Trust<br>
+& Integrity</span
+              >
+            </li>
+            <li
+              data-aos="fade-down"
+              data-aos-duration="1000"
+              data-aos-delay="600"
+            >
+              <img src="../assets/img/br/value_sub3_plan4.jpg" /><span
+                >Respect<br>
+& Consideration</span
+              >
+            </li>
+            <li
+              data-aos="fade-down"
+              data-aos-duration="1000"
+              data-aos-delay="800"
+            >
+              <img src="../assets/img/br/value_sub3_plan5.jpg" /><span
+                >Communication <br>
+& Collaboration</span
+              >
+            </li>
+          </ul>
+        </section>
+        <!-- E : sub3 -->
+      </div>
+      <footer id="footer"></footer>
+    </div>
+  </body>
+</html>

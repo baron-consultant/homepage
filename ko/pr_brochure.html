@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- /assets -->
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/font.css" />
+    <link rel="stylesheet" href="../assets/css/lib/aos.min.css" />
+    <link rel="stylesheet" href="../assets/css/lib/lenis.min.css" />
+    <script src="../assets/js/lib/aos.min.js"></script>
+    <script src="../assets/js/lib/lenis.min.js"></script>
+    <script src="../assets/js/lib/jquery-3.6.1.min.js"></script>
+    <script src="../assets/js/lib/gsap.min.js"></script>
+    <script src="../assets/js/lib/scrolltrigger.min.js"></script>
+    <script src="../assets/js/lib/scrollToPlugin.min.js"></script>
+    <!-- CSS / JS -->
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="../assets/css/pr.css" />
+    <script type="module" src="../assets/js/common.js"></script>
+    <script src="../assets/js/br.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <header id="header"></header>
+      <ul class="map_list"></ul>
+      <div class="container pr brochure">
+        <!-- S : intro -->
+        <section class="intro">
+          <div class="txt_box" data-aos="fade-down" data-aos-duration="1000">
+            <p class="eng_txt">PR Center</p>
+            <p class="main_txt">
+              홍보센터
+            </p>
+            <p class="sub_txt">
+              바론의 기준과 이야기를 전합니다.
+            </p>
+          </div>
+          <div class="scroll_box">
+            <span>Scroll</span>
+            <div></div>
+          </div>
+        </section>
+        <!-- E : intro -->
+        <!-- S : sub1 -->
+        <section class="sub1">
+          <picture>
+            <source
+              media="(max-width:1400px)"
+              srcset="../assets/img/pr/brochure_sub1_bg.png"
+            />
+            <source
+              media="(min-width: 1401px)"
+              srcset="../assets/img/pr/brochure_sub1_bg.png"
+            />
+            <img class="bg" src="../assets/img/pr/brochure_sub1_bg.png" alt="" />
+          </picture>
+
+          <div
+            class="txt_box dark"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
+            <p class="main_txt">
+              브로슈어
+            </p>
+          </div>
+          <div class="brochure_wrap">
+                <div class="bro_baron">
+                    <div class="tit">
+                        <div class="eng_tit">Baron Brochure</div>
+                        <b>바론</b> 브로슈어
+                    </div>
+                    <!-- <div id="mo_view" class="bro_btn" onclick="window.open('../assets/file/baron_bro.pdf')">브로슈어 보기
+                        <img src="../assets/img/pr/ico_bro_btn.svg" alt="" class="bro_ico">
+                        <img src="../assets/img/pr/ico_bro_hover_btn.svg" alt="" class="bro_ico_hover">
+                    </div> -->
+                    <img src="../assets/img/pr/bro_baron.png" alt="" class="bro_img" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="bro_btn_wrap">
+                        <div class="bro_btn" onclick="window.open('../assets/file/baron_bro_kr.pdf')">한글 브로슈어
+                            <img src="../assets/img/pr/ico_bro_btn.svg" alt="" class="bro_ico">
+                            <img src="../assets/img/pr/ico_bro_hover_btn.svg" alt="" class="bro_ico_hover">
+                        </div>
+                        <div class="bro_btn" onclick="window.open('../assets/file/baron_bro_en.pdf')">영문 브로슈어
+                            <img src="../assets/img/pr/ico_bro_btn.svg" alt="" class="bro_ico">
+                            <img src="../assets/img/pr/ico_bro_hover_btn.svg" alt="" class="bro_ico_hover">
+                        </div>
+                    </div>
+                </div>
+                <div class="bro_hanmac">
+                    <div class="tit">
+                        <div class="eng_tit">Hanmac Brochure</div>
+                        <b>가족</b> 브로슈어
+                </div>
+                    <!--<div id="mo_view" class="bro_btn" onclick="window.open('../assets/file/hanmac_bro.pdf')">브로슈어 보기
+                        <img src="../assets/img/pr/ico_bro_btn.svg" alt="" class="bro_ico">
+                       <img src="../assets/img/pr/ico_bro_hover_btn.svg" alt="" class="bro_ico_hover">
+                    </div> -->
+                    <img src="../assets/img/pr/bro_hanmac.png" alt="" class="bro_img" data-aos="fade-up" data-aos-duration="1000">
+                   
+                    <div class="bro_btn_wrap">
+                        <div class="bro_btn" onclick="window.open('../assets/file/hanmac_bro.pdf')">한글 브로슈어
+                            <img src="../assets/img/pr/ico_bro_btn.svg" alt="" class="bro_ico">
+                            <img src="../assets/img/pr/ico_bro_hover_btn.svg" alt="" class="bro_ico_hover">
+                        </div>
+                        <div class="bro_btn" onclick="window.open('../assets/file/hanmac_bro_en.pdf')">영문 브로슈어
+                            <img src="../assets/img/pr/ico_bro_btn.svg" alt="" class="bro_ico">
+                            <img src="../assets/img/pr/ico_bro_hover_btn.svg" alt="" class="bro_ico_hover">
+                        </div>
+                    </div>
+                </div>
+          </div>
+        </section>
+        <!-- E : sub1 -->
+      </div>
+      <footer id="footer"></footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,219 @@
+body {
+    margin: 0;
+    background: #eef2f7;
+    font-family: 'Pretendard', sans-serif;
+}
+
+.sales-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* 좌측 사이드 */
+.sales-sidebar {
+    width: 220px;
+    background: #428BCA;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 15px;
+    box-sizing: border-box;
+}
+
+.sales-logo {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* 메뉴 */
+.sales-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sales-menu li {
+    margin-bottom: 10px;
+}
+
+.sales-menu li a {
+    display: block;
+    padding: 10px;
+    background: #357ABD;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+.sales-menu li a:hover,
+.sales-menu li.active a {
+    background: #2C5F8A;
+}
+
+/* 항목 텍스트 */
+.sidebar-title {
+    margin-top: auto;
+    font-size: 16px;
+    opacity: 0.8;
+    text-align: center;
+}
+
+/* 메인영역 */
+.sales-main {
+    flex: 1;
+    padding: 25px;
+    background: #ffffff;
+    overflow-y: auto;
+}
+
+/* ==========================
+   현재 주차 테이블 셀 강조
+========================== */
+
+/* 날짜 헤더 */
+.week-current th {
+    background-color: #eff6ff; /* blue-50 */
+    color: #1e3a8a;           /* blue-800 */
+    font-weight: 600;
+}
+
+/* 담당자 이름 칸 제외한 일정 셀 */
+.week-current td:not(:first-child) {
+    background-color: #f8fbff; /* 아주 연한 블루 */
+}
+
+/* hover 시에도 톤 유지 */
+.week-current td:not(:first-child):hover {
+    background-color: #e0ecff;
+}
+
+/* ==========================
+   영업 스케줄 테이블 고정 레이아웃
+========================== */
+.sales-schedule-table {
+    table-layout: fixed;   /* ⭐ 핵심 */
+    width: 100%;
+}
+
+/* 담당자 컬럼 */
+.sales-schedule-table th:first-child,
+.sales-schedule-table td:first-child {
+    width: 120px;
+    min-width: 120px;
+    max-width: 120px;
+}
+
+/* 날짜 컬럼들 (균일 분배) */
+.sales-schedule-table th:not(:first-child),
+.sales-schedule-table td:not(:first-child) {
+    width: calc((100% - 120px) / 5);
+    vertical-align: top;
+}
+
+/* 셀 안 내용 넘칠 때 처리 */
+.sales-schedule-table td {
+    word-break: break-word;
+    white-space: normal;
+}
+
+/* ==========================
+   일정 추가 모달 UI 개선
+========================== */
+.swal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    text-align: left;
+}
+
+.swal-group label.title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151; /* gray-700 */
+    margin-bottom: 4px;
+    display: block;
+}
+
+.swal-radio {
+    display: flex;
+    gap: 16px;
+}
+
+.swal-radio label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.swal-input,
+.swal-select,
+.swal-textarea {
+    width: 100%;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-size: 13px;
+}
+
+.swal-textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* ==========================
+   일정 상세 모달 UI
+========================== */
+
+.swal-schedule-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.swal-schedule-title {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.swal-schedule-sub {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.swal-schedule-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.swal-schedule-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 10px 12px;
+    background: #fafafa;
+}
+
+.swal-schedule-content {
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.swal-schedule-meta {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.swal-schedule-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 6px;
+    margin-top: 6px;
+}

@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-YWLEP3YXQ8"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-YWLEP3YXQ8');
+		</script>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Open Graph: 카카오톡 미리보기용 -->
+        <meta property="og:title" content="TOVA" />
+        <meta property="og:description" content="교통수요 분석 전문 소프트웨어" />
+        <meta property="og:image" content="http://k-tova.com/tova/img/og-main-thumb.JPG" />
+        <meta property="og:url" content="http://k-tova.com/">
+        <meta property="og:type" content="website" />
+
+        <!-- SEO Meta Tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="교통수요 분석 전문 소프트웨어" />
+        <meta name="keywords" content="교통수요 분석, 대중교통, 교통정책, 요금제도, 통행배정, 공로통행, TOVA, 토바, k-tova, 바론, 한맥, 삼안, 교통" />
+        <meta name="naver-site-verification" content="593392d689f99b3f4e5131bffef831b86602e168" />
+
+        <title>TOVA</title>
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/font.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" type="text/css"/>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script> 
+        <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.9/dist/lenis.css">
+        <script type="text/javascript" src="./js/jquery-3.6.1.min.js"></script>
+        <script type="text/javascript" src="./js/jquery.mousewheel.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+        <script type="text/javascript" src="./js/common.js?v=20260623h"></script>
+        <script type="text/javascript" src="./js/popup.js"></script>
+        <script type="text/javascript" src="./js/index.js"></script>
+    </head>
+<body>
+    <div class="wrapper">
+        <div class="main_mask">
+			 <!-- Header -->
+<!-- Header -->
+            <header class="js__header"></header>
+            <!-- //Header -->
+
+		   <!-- //Header -->
+            <!-- 모든 팝업페이지 경로 -->            
+            
+            <!-- 모든 팝업페이지 경로 -->
+            <!-- main -->
+            <div class="main">
+                <ul class="pagination_main">
+                    <li><div class="page_01 page_on"><font class="tova w">TOVA </font>소개</div><span>01</span></li>
+                    <li><div class="page_02">주요기능</div><span>02</span></li>
+                    <li><div class="page_03">공로 분석</div><span>03</span></li>
+                    <li><div class="page_04">대중교통 분석</div><span>04</span></li>
+                </ul>
+                <div class="main_link">
+                    <a href="#01" class="main_link_01 link_on" onclick="location.href='./value.html'"></a>
+                    <a href="#02" class="main_link_02" onclick="location.href='./primary.html'"></a>
+                    <a href="#03" class="main_link_03" onclick="location.href='./road.html'"></a>
+                    <a href="#04" class="main_link_04" onclick="location.href='./public.html'"></a>
+                </div>
+                <div class="bg_video">
+                    <video id="video_play" autoplay muted playsinline>
+                        <source src="./img/main_01.mp4" type="video/mp4" class="main_video_01">
+                    </video>
+            </div>
+		<!-- FOOTER -->
+        <footer id="footer"></footer>
+    	<!-- //FOOTER -->
+            </div>
+        </div>
+        <div class="intro_wrap">
+            <div class="intro_mask"></div>
+            <div class="intro_txt">
+                <div class="txt_mask"><span>한국형 통합 교통수요 <br class="brk">분석 프로그램</span></div>
+                <div class="txt_mask"><span><font class="tova k">TOVA</font>는</span></div>
+                <div class="txt_mask"><span><em>교통의 미래를 선도</em>합니다.</span></div>
+            </div>
+        </div>  
+    </div>
+
+    <script>
+        AOS.init();
+		
+		const lenis = new Lenis()
+		lenis.on('scroll', (e) => {
+			// console.log(e)
+		})
+		lenis.on('scroll', ScrollTrigger.update)
+		gsap.ticker.add((time)=>{
+			lenis.raf(time * 1000)
+		})
+		gsap.ticker.lagSmoothing(0)
+    </script>
+</body>
+</html>
+
+
+

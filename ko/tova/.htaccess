@@ -1,0 +1,8 @@
+RewriteEngine On
+
+RewriteRule ^index\.php$ index.html [R=302,L]
+RewriteRule ^bbs/value\.html$ value.html [R=302,L]
+RewriteRule ^bbs/primary\.html$ primary.html [R=302,L]
+RewriteRule ^bbs/road\.html$ road.html [R=302,L]
+RewriteRule ^bbs/public\.html$ public.html [R=302,L]
+RewriteRule ^bbs/buy\.html$ buy.html [R=302,L]

@@ -1,0 +1,51 @@
+<!--영문화-->
+<style>
+    header .logo_box a.logo{mask-image: url(../assets/img/eng/logo_c.svg);}
+  header .header_inner nav{flex:1 1 auto;min-width:0;}
+  header .header_inner .header_R{display:flex;align-items:center;margin-left:auto;}
+  header .header_inner .header_R .language{display:inline-flex;align-items:center;flex-wrap:nowrap;flex-shrink:0;min-width:84px;padding-right:24px;white-space:nowrap;}
+  header .header_inner .header_R .language a{display:inline-flex;align-items:center;flex:0 0 auto;white-space:nowrap;}
+  header .header_inner nav ol li.depth1 span,
+  header .header_inner nav ol li.depth1 span em,
+  header .header_inner nav ol li.depth1 ul.depth2 li a,
+  header .header_inner nav ol li.depth1 ul.depth2 li ul.depth3 li a{word-break:keep-all;overflow-wrap:normal;white-space:normal;}
+</style>
+
+<!-- CORP -->
+<div class="header_inner corp">
+  <div class="logo_box">
+    <!-- a = 홈페이지 로고 -->
+    <!-- a의 이미지는은 style.css에서 제어하세요 -->
+    <a class="logo" href="../en/index.html">Baron Consultants</a>
+  </div>
+
+  <!-- 오픈메뉴 경우 -->
+  <nav class="nav"></nav>
+
+  <!-- 버튼형 경우 -->
+    <div class="header_R">
+        <div class="language">
+            <a href="../ko/index.html">KR</a>
+          <a href="#" class="on">EN</a>
+        </div>
+
+        <button class="btn_menu" data-value="sitemap">
+            <div></div>
+            <div></div>
+            <div></div>
+        </button>
+    </div> 
+</div>
+
+<div class="popup_wrap sitemap">
+  <div class="popup_contents_wrap" data-lenis-prevent-wheel>
+    <div class="popup_header">
+      <div class="logo_box">
+        <a class="logo" href="../en/index.html">Baron Consultants</a>
+      </div>
+      <button class="btn_close"><i class="close"></i></button>
+    </div>
+
+    <nav class="nav"></nav>
+  </div>
+</div>

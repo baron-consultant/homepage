@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/font.css" />
+    <link rel="stylesheet" href="../assets/css/lib/aos.min.css" type="text/css" />
+    <link rel="stylesheet" href="../assets/css/lib/lenis.min.css" />
+    <link rel="stylesheet" href="../assets/css/recruit.css" />
+    <!-- JS -->
+    <script src="../assets/js/lib/aos.min.js"></script>
+    <script src="../assets/js/lib/lenis.min.js"></script>
+    <script src="../assets/js/lib/jquery-3.6.1.min.js"></script>
+    <script src="../assets/js/lib/gsap.min.js"></script>
+    <script src="../assets/js/lib/scrolltrigger.min.js"></script>
+    <script src="../assets/js/lib/scrollToPlugin.min.js"></script>
+    <script type="module" src="../assets/js/eng/common.js"></script>
+  </head>
+
+  <body>
+<script>
+var tag = document.createElement('script');
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+var player;
+    function onYouTubeIframeAPIReady() {
+		player = new YT.Player('player', {
+			playerVars: {
+			'controls': 1,
+			'autohide': 1,
+			'wmode': 'opaque',
+			'showinfo': 0,
+			'mute':1,
+      'rel':0,
+			'playsinline':1,
+      'modestbranding':1 
+		},
+		videoId: '2HiPL3iCWSM',
+		events: {
+			'onReady': onPlayerReady,
+            'onStateChange':onPlayerStateChange
+		}
+	});
+  }
+
+  function onPlayerReady(event) {
+	event.target.stopVideo();
+  }
+
+  function onPlayerStateChange(event) {
+	if (event.data == '0')
+		{				
+			event.target.seekTo(0);
+			event.target.stopVideo();
+		}
+  }
+
+  function stopVideo() {
+	player.stopVideo();
+  }
+</script>
+<div id="player"></div>
+
+
+</body>
+</html>

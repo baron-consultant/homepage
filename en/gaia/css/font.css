@@ -1,0 +1,49 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 100;
+    src: url(../font/NotoKR-Thin/notokr-thin.woff2) format('woff2'),
+         url(../font/NotoKR-Thin/notokr-thin.woff) format('woff'),
+         url(../font/NotoKR-Thin/notokr-thin.otf) format('opentype');
+  }
+  @font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 300;
+    src: url(../font/NotoKR-Light/notokr-light.woff2) format('woff2'),
+         url(../font/NotoKR-Light/notokr-light.woff) format('woff'),
+         url(../font/NotoKR-Light/notokr-light.otf) format('opentype');
+  }
+  @font-face {
+     font-family: 'Noto Sans KR';
+     font-style: normal;
+     font-weight: 400;
+     src: url(../font/NotoKR-Regular/notokr-regular.woff2) format('woff2'),
+          url(../font/NotoKR-Regular/notokr-regular.woff) format('woff'),
+          url(../font/NotoKR-Regular/notokr-regular.otf) format('opentype');
+   }
+  @font-face {
+     font-family: 'Noto Sans KR';
+     font-style: normal;
+     font-weight: 500;
+     src: url(../font/NotoKR-Medium/notokr-medium.woff2) format('woff2'),
+          url(../font/NotoKR-Medium/notokr-medium.woff) format('woff'),
+          url(../font/NotoKR-Medium/notokr-medium.otf) format('opentype');
+   }
+  @font-face {
+     font-family: 'Noto Sans KR';
+     font-style: normal;
+     font-weight: 700;
+     src: url(../font/NotoKR-Bold/notokr-bold.woff2) format('woff2'),
+          url(../font/NotoKR-Bold/notokr-bold.woff) format('woff'),
+          url(../font/NotoKR-Bold/notokr-bold.otf) format('opentype');
+   }
+  @font-face {
+     font-family: 'Noto Sans KR';
+     font-style: normal;
+     font-weight: 900;
+     src: url(../font/NotoKR-Black/notokr-black.woff2) format('woff2'),
+          url(../font/NotoKR-Black/notokr-black.woff) format('woff'),
+          url(../font/NotoKR-Black/notokr-black.otf) format('opentype');
+   }

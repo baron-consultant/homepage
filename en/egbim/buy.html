@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-STZ2R5Q7HG"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-STZ2R5Q7HG');
+	</script>
+    <meta charset="UTF-8">
+    
+    <title>Contact</title>
+<link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/font.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" type="text/css"/>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script> 
+	<link rel="stylesheet" href="https://unpkg.com/lenis@1.1.9/dist/lenis.css">
+    <script type="text/javascript" src="js/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+	<script type="text/javascript" src="js/common.js?v=20260623h"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- HEADER -->
+        
+        <!-- //Header -->
+
+        <!-- ?꿔꺂??袁ㅻ븶??????꾩룆梨룬????볥궙?袁р뵾???? ?嚥▲굧???뚪뜮?-->            
+            
+        <!-- //?꿔꺂??袁ㅻ븶??????꾩룆梨룬????볥궙?袁р뵾???? ?嚥▲굧???뚪뜮?-->
+         <!-- ???????????嶺뚮??ｆ뤃?-->
+
+		<div class="container buy">
+			<section class="intro">
+				<div class="top js__dark">
+					<h2>Contact</h2>
+					<span>EG-BIM Purchase Inquiries & Product Information</span>
+				</div>
+			</section>
+			<section class="contents_wrap">
+				
+				<div class="ask_area">
+					<div class="ask_l">
+						<span class="mid_tit">Experience the next-generation <br>S/W with <font class="egbim k">EG-BIM S/W</font></span>
+					</div>
+					<div class="ask_r">
+						<span class="sub_text"><em>License usage <font style="color: var(--color-orange)">may be restricted</font></em> if duplicate licenses are detected.</span>
+						<div class="ask_btn">
+							<a href="mailto:baroncs@baroncs.co.kr" class="btn_ask" ><i></i>EG-BIM Purchase Inquiry</a>
+                            <!-- <a href="#" onclick="alert('???戮?뜪???嚥▲굧?????? 嚥싳쉶瑗ц짆堉샕????猷붾?????뉖뤁??'); return false;" class="btn_ask" ><i></i>EG-BIM ????彛?????戮?뜪??/a> -->
+							<a href="download/EGBIM_leaflet_v01.pdf" download class="btn_brochure"><i></i>Brochure</a>
+							<a href="download/EGBIM_manual.pdf" download class="btn_manual"><i></i>Manual</a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="video_area" data-aos="fade-right" data-aos-duration="1000">
+					<div class="vod_wrap"><video autoplay muted loop playsinline><source src="img/EGBIM_buy.mp4"></video></div>
+					<div class="contact_area">
+						<p>
+							<span class="mid_tit">Purchase Consultation</span>
+							<span class="sub_text">Contact the EG-BIM team directly</span>
+						</p>
+						<div class="line"></div>
+						<ul>
+							<li class="tel"><i></i><a href="tel:0214147434">02 - 2141 - 7434</a></li>
+							<li class="mail"><i></i>baroncs@baroncs.co.kr</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</div>
+
+        <!-- //???????????嶺뚮??ｆ뤃?-->
+        <!-- FOOTER -->
+        
+        <!-- //FOOTER -->
+    </div>
+    <script>
+        AOS.init();
+
+		const lenis = new Lenis()
+		lenis.on('scroll', (e) => {
+			// console.log(e)
+		})
+		lenis.on('scroll', ScrollTrigger.update)
+		gsap.ticker.add((time)=>{
+			lenis.raf(time * 1000)
+		})
+		gsap.ticker.lagSmoothing(0)
+    </script>
+</body>
+</html>
+

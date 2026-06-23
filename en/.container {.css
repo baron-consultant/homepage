@@ -1,0 +1,98 @@
+.container {
+width: 420px;
+text-align: center;
+}
+
+
+h1 {
+font-size: 24px;
+font-weight: 700;
+margin-bottom: 8px;
+color: #222;
+}
+
+
+.subtitle {
+font-size: 14px;
+color: #666;
+margin-bottom: 32px;
+}
+
+
+/* Tree Section */
+.tree-box {
+background: white;
+border-radius: 20px;
+padding: 28px 20px;
+box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+margin-bottom: 32px;
+}
+
+
+.tree-illustration {
+width: 100%;
+height: 200px;
+background: url('tree_step_3_sample.png'); /* placeholder */
+background-size: contain;
+background-position: center;
+background-repeat: no-repeat;
+}
+
+
+.indicator {
+margin-top: 16px;
+display: flex;
+justify-content: center;
+gap: 6px;
+}
+
+
+.dot {
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background: #D0D7DF;
+}
+
+
+.dot.active {
+background: #4CAF50;
+}
+
+
+/* Content Cards */
+.content-card {
+background: white;
+border-radius: 14px;
+padding: 18px 20px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+margin-bottom: 16px;
+text-align: left;
+}
+
+
+.content-title {
+font-size: 16px;
+font-weight: 600;
+margin-bottom: 6px;
+}
+
+
+.content-desc {
+font-size: 13px;
+color: #777;
+margin-bottom: 12px;
+}
+
+
+.btn {
+display: inline-block;
+background: #4CAF50;
+padding: 8px 14px;
+border-radius: 10px;
+font-size: 13px;
+font-weight: 600;
+color: white;
+text-decoration: none;
+}
+}
