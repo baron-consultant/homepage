@@ -16,11 +16,11 @@ jobs:
 
       - name: Configure AWS CLI environment for R2
         run: |
-          echo "AWS_ACCESS_KEY_ID=${{ secrets.CF_R2_ACCESS_KEY_ID }}" >> $GITHUB_ENV
-          echo "AWS_SECRET_ACCESS_KEY=${{ secrets.CF_R2_SECRET_ACCESS_KEY }}" >> $GITHUB_ENV
+          echo "AWS_ACCESS_KEY_ID=${{ 164a25bd1ec15024f1d4ba52a58ce20d }}" >> $GITHUB_ENV
+          echo "AWS_SECRET_ACCESS_KEY=${{ 07cbb81294a8b2340cedb9998054b91f7921250dbd322e3bfd344b1965c84d53 }}" >> $GITHUB_ENV
           echo "AWS_DEFAULT_REGION=auto" >> $GITHUB_ENV
-          echo "R2_ACCOUNT_ID=${{ secrets.CF_R2_ACCOUNT_ID }}" >> $GITHUB_ENV
-          echo "R2_BUCKET=${{ secrets.CF_R2_BUCKET }}" >> $GITHUB_ENV
+          echo "R2_ACCOUNT_ID=${{ 81fa2d48964d31dd0da9558f9ce601d1 }}" >> $GITHUB_ENV
+          echo "R2_BUCKET=${{ baron-homepage }}" >> $GITHUB_ENV
 
       - name: Verify AWS CLI
         run: aws --version
