@@ -25,6 +25,20 @@ jobs:
       - name: Verify AWS CLI
         run: aws --version
 
+      - name: Validate R2 bucket access
+        run: |
+          endpoint="https://$R2_ACCOUNT_ID.r2.cloudflarestorage.com"
+          echo "Checking access to R2 bucket: $R2_BUCKET"
+
+          if ! aws s3api list-objects-v2 \
+            --bucket "$R2_BUCKET" \
+            --max-items 1 \
+            --endpoint-url "$endpoint" \
+            > /dev/null; then
+            echo "::error::Unable to list objects in R2 bucket '$R2_BUCKET'. Confirm CF_R2_ACCOUNT_ID matches the bucket account and the R2 access key can read and write this bucket. aws s3 sync requires ListObjectsV2 access before upload and delete operations."
+            exit 1
+          fi
+
       - name: Sync Baron site to Cloudflare R2
         run: |
           aws s3 sync ./ s3://$R2_BUCKET \
