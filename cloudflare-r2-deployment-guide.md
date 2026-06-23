@@ -30,7 +30,7 @@ flowchart LR
     A[로컬 작업\nbaron 파일 수정] --> B[git add and commit]
     B --> C[git push origin main]
     C --> D[GitHub Actions 실행]
-    D --> E[Cloudflare R2로 sync 배포]
+   D --> E[변경 파일만 Cloudflare R2로 배포]
     E --> F[R2 Custom Domain 연결]
     F --> G[Cloudflare DNS and TLS]
     G --> H[실서비스 오픈]
@@ -237,13 +237,15 @@ GitHub 저장소의 `Settings -> Secrets and variables -> Actions`에 아래 값
 
 - `main` 브랜치로 push
 - GitHub Actions 실행
-- Baron 정적 파일을 R2 버킷에 sync
-- 필요 시 오래된 파일 삭제
+- push 된 커밋 기준 변경 파일만 R2 버킷에 업로드
+- 삭제된 파일은 R2에서도 함께 삭제
+- 수동 실행이나 초기 배포처럼 비교 기준이 없을 때만 전체 sync 수행
 
 중요:
 
 - 현재 배포 파이프라인은 `GitHub` 기준이다.
 - Gitea Actions나 자체 Runner 기준 문서는 이 가이드 범위에 포함하지 않는다.
+- 즉, 평소 운영 배포는 전체 파일을 매번 다시 올리는 방식이 아니라 변경분만 반영하는 방식으로 동작한다.
 
 이 저장소에는 실제 예시 워크플로 파일도 함께 추가한다.
 

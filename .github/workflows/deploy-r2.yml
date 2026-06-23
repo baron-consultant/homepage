@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Configure AWS CLI environment for R2
         run: |
@@ -62,16 +64,121 @@ jobs:
             exit 1
           fi
 
-      - name: Sync Baron site to Cloudflare R2
+      - name: Deploy changed files to Cloudflare R2
         run: |
-          aws s3 sync ./ s3://$R2_BUCKET \
-            --endpoint-url https://$R2_ACCOUNT_ID.r2.cloudflarestorage.com \
-            --delete \
-            --exclude ".git/*" \
-            --exclude ".github/*" \
-            --exclude "*.md"
+          endpoint="https://$R2_ACCOUNT_ID.r2.cloudflarestorage.com"
+          before_sha="${{ github.event.before }}"
+          after_sha="${{ github.sha }}"
+
+          should_skip() {
+            case "$1" in
+              .git/*|.github/*|*.md|"") return 0 ;;
+              *) return 1 ;;
+            esac
+          }
+
+          full_sync() {
+            echo "Running full bucket sync"
+            aws s3 sync ./ s3://$R2_BUCKET \
+              --endpoint-url "$endpoint" \
+              --delete \
+              --exclude ".git/*" \
+              --exclude ".github/*" \
+              --exclude "*.md" \
+              --only-show-errors
+          }
+
+          if [ "${{ github.event_name }}" != "push" ]; then
+            echo "workflow_dispatch detected. Falling back to full sync."
+            full_sync
+            exit 0
+          fi
+
+          if [ -z "$before_sha" ] || [ "$before_sha" = "0000000000000000000000000000000000000000" ]; then
+            echo "Initial push detected. Falling back to full sync."
+            full_sync
+            exit 0
+          fi
+
+          if ! git cat-file -e "$before_sha^{commit}" 2>/dev/null; then
+            echo "Missing previous commit locally. Fetching $before_sha"
+            git fetch --no-tags origin "$before_sha"
+          fi
+
+          changed_count=0
+          deleted_count=0
+
+          while IFS= read -r -d '' status; do
+            old_path=""
+            new_path=""
+
+            case "$status" in
+              R*|C*)
+                IFS= read -r -d '' old_path || break
+                IFS= read -r -d '' new_path || break
+                ;;
+              *)
+                IFS= read -r -d '' new_path || break
+                ;;
+            esac
+
+            case "$status" in
+              A*|M*|T*|C*)
+                if should_skip "$new_path"; then
+                  continue
+                fi
+
+                if [ -f "$new_path" ]; then
+                  echo "Uploading $new_path"
+                  aws s3 cp "$new_path" "s3://$R2_BUCKET/$new_path" \
+                    --endpoint-url "$endpoint" \
+                    --only-show-errors
+                  changed_count=$((changed_count + 1))
+                fi
+                ;;
+              D*)
+                if should_skip "$new_path"; then
+                  continue
+                fi
+
+                echo "Deleting $new_path"
+                aws s3 rm "s3://$R2_BUCKET/$new_path" \
+                  --endpoint-url "$endpoint" \
+                  --only-show-errors
+                deleted_count=$((deleted_count + 1))
+                ;;
+              R*)
+                if ! should_skip "$old_path"; then
+                  echo "Deleting renamed source $old_path"
+                  aws s3 rm "s3://$R2_BUCKET/$old_path" \
+                    --endpoint-url "$endpoint" \
+                    --only-show-errors
+                  deleted_count=$((deleted_count + 1))
+                fi
+
+                if should_skip "$new_path"; then
+                  continue
+                fi
+
+                if [ -f "$new_path" ]; then
+                  echo "Uploading renamed target $new_path"
+                  aws s3 cp "$new_path" "s3://$R2_BUCKET/$new_path" \
+                    --endpoint-url "$endpoint" \
+                    --only-show-errors
+                  changed_count=$((changed_count + 1))
+                fi
+                ;;
+            esac
+          done < <(git diff --name-status --find-renames -z "$before_sha" "$after_sha")
+
+          echo "Uploaded files: $changed_count"
+          echo "Deleted files: $deleted_count"
+
+          if [ "$changed_count" -eq 0 ] && [ "$deleted_count" -eq 0 ]; then
+            echo "No deployable file changes detected."
+          fi
 
       - name: Deployment summary
         run: |
-          echo "Deployed repository root to Cloudflare R2 bucket: $R2_BUCKET"
+          echo "Deployed changed files from repository root to Cloudflare R2 bucket: $R2_BUCKET"
           echo "R2 endpoint: https://$R2_ACCOUNT_ID.r2.cloudflarestorage.com"

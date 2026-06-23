@@ -1,57 +1,38 @@
 // ?�� AJAX 관??SCRIPT
 $(function () {
+  const rootPrefix = location.pathname.startsWith('/baron/') ? '/baron' : '';
+
   // EGBIM은 4-level 깊이 (/ko/egbim/)
   // TOVA/GAIA는 3-level 깊이 (/ko/tova/, /ko/gaia/)
   const isEgbim = location.pathname.includes('/egbim/');
   const isTovOrGaia = location.pathname.includes('/tova/') || location.pathname.includes('/gaia/');
   
-  // 배포는 도메인 루트 기준, 로컬 baron 서브경로는 fallback으로 처리
+  // 배포는 도메인 루트 기준, 로컬 /baron 경로면 prefix를 자동 반영
   let includeBase;
   if (isEgbim) {
-    includeBase = '/_include';
+    includeBase = `${rootPrefix}/_include`;
   } else if (isTovOrGaia) {
-    includeBase = '/_include';
+    includeBase = `${rootPrefix}/_include`;
   } else {
-    includeBase = '/_include';
+    includeBase = `${rootPrefix}/_include`;
   }
 
   $.ajaxSetup({ cache: false });
 
   function loadHTML(url, target, callback) {
-    const done = () => {
-      if (typeof callback === "function") callback();
-    };
-
-    const request = (requestUrl, onFail) => {
-      $.ajax({
-        url: requestUrl,
-        async: true,
-        timeout: 5000,
-        success: function (data) {
-          $(target).html(data);
-          done();
-        },
-        error: function (xhr, status, error) {
-          if (typeof onFail === "function") {
-            onFail(xhr, status, error);
-            return;
-          }
-          console.error(`??Failed to load ${requestUrl}:`, error || status);
-          done();
-        },
-      });
-    };
-
-    // ?�로?�트 배포 경로 차이 ?�?? /_include/* ?�패 ??/baron/_include/* ?�시??
-    if (url.startsWith("/_include/")) {
-      request(url, function () {
-        const fallbackUrl = `/baron${url}`;
-        request(fallbackUrl);
-      });
-      return;
-    }
-
-    request(url);
+    $.ajax({
+      url: url,
+      async: true,
+      timeout: 5000,
+      success: function (data) {
+        $(target).html(data);
+        if (typeof callback === "function") callback();
+      },
+      error: function (xhr, status, error) {
+        console.error(`??Failed to load ${url}:`, error || status);
+        if (typeof callback === "function") callback();
+      },
+    });
   }
 
   // ?��nav ?�결

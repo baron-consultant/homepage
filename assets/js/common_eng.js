@@ -1,46 +1,27 @@
 // ?�� AJAX 관??SCRIPT
 $(function () {
-  // 배포는 도메인 루트 기준, 로컬 baron 서브경로는 fallback으로 처리
-  const includeBase = '/_include/eng';
+  const rootPrefix = location.pathname.startsWith('/baron/') ? '/baron' : '';
+
+  // 배포는 도메인 루트 기준, 로컬 /baron 경로면 prefix를 자동 반영
+  const includeBase = `${rootPrefix}/_include/eng`;
 
 
   $.ajaxSetup({ cache: false });
 
   function loadHTML(url, target, callback) {
-    const done = () => {
-      if (typeof callback === "function") callback();
-    };
-
-    const request = (requestUrl, onFail) => {
-      $.ajax({
-        url: requestUrl,
-        async: true,
-        timeout: 5000,
-        success: function (data) {
-          $(target).html(data);
-          done();
-        },
-        error: function (xhr, status, error) {
-          if (typeof onFail === "function") {
-            onFail(xhr, status, error);
-            return;
-          }
-          console.error(`??Failed to load ${requestUrl}:`, error || status);
-          done();
-        },
-      });
-    };
-
-    // ?�로?�트 배포 경로 차이 ?�?? /_include/eng/* ?�패 ??/baron/_include/eng/* ?�시??
-    if (url.startsWith("/_include/eng/")) {
-      request(url, function () {
-        const fallbackUrl = `/baron${url}`;
-        request(fallbackUrl);
-      });
-      return;
-    }
-
-    request(url);
+    $.ajax({
+      url: url,
+      async: true,
+      timeout: 5000,
+      success: function (data) {
+        $(target).html(data);
+        if (typeof callback === "function") callback();
+      },
+      error: function (xhr, status, error) {
+        console.error(`??Failed to load ${url}:`, error || status);
+        if (typeof callback === "function") callback();
+      },
+    });
   }
 
   // ?��nav ?�결
