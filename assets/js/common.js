@@ -77,15 +77,25 @@ $(function () {
       }
     });
   }
+
+  function loadSitemapNav() {
+    if (!$('.container').hasClass('recruit')) {
+      loadHTML(`${includeBase}/nav.html?v=${includeVersion}`, '.popup_wrap.sitemap .popup_contents_wrap nav');
+    } else {
+      loadHTML(`${includeBase}/nav_recruit.html?v=${includeVersion}`, '.popup_wrap.sitemap .popup_contents_wrap nav');
+    }
+  }
   // ?��header ??nav.html ?�결
   if (!$(".container").hasClass("recruit")) {
     loadHTML(`${includeBase}/header.html?v=${includeVersion}`, "#header", function () {
       loadHTML(`${includeBase}/nav.html?v=${includeVersion}`, "#header .corp .nav", function () {
         connectNavToMapList();
       });
+      loadSitemapNav();
     });
   } else {
     loadHTML(`${includeBase}/header_recruit.html?v=${includeVersion}`, "#header_recruit", function () {
+      loadSitemapNav();
       if (!$(".container").hasClass("recruit")) {
       } else {
         const currentPath = location.pathname.split("/").pop();
@@ -100,13 +110,6 @@ $(function () {
         });
       }
     });
-  }
-
-  // ?��sitemap ??nav.html ?�결
-  if (!$(".container").hasClass("recruit")) {
-    loadHTML(`${includeBase}/nav.html?v=${includeVersion}`, ".popup_wrap.sitemap .popup_contents_wrap nav");
-  } else {
-    loadHTML(`${includeBase}/nav_recruit.html?v=${includeVersion}`, ".popup_wrap.sitemap .popup_contents_wrap nav");
   }
 
   // ?��footer ??nav.html ?�결

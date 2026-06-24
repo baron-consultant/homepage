@@ -70,15 +70,32 @@ $(function () {
     });
   }
 
+  function loadSitemapNav() {
+    if (!$('.container').hasClass('recruit')) {
+      loadHTML(
+        "../_include/eng/nav.html",
+        ".popup_wrap.sitemap .popup_contents_wrap nav",
+        trimPopupDepth3Nav
+      );
+    } else {
+      loadHTML(
+        "../_include/eng/nav_recruit.html",
+        ".popup_wrap.sitemap .popup_contents_wrap nav"
+      );
+    }
+  }
+
   // ?��header ??nav.html ?�결
   if (!$(".container").hasClass("recruit")) {
     loadHTML("../_include/eng/header.html", "#header", function () {
       loadHTML("../_include/eng/nav.html", "#header .corp .nav", function () {
         connectNavToMapList();
       });
+      loadSitemapNav();
     });
   } else {
     loadHTML("../_include/eng/header_recruit.html", "#header_recruit", function () {
+      loadSitemapNav();
       if (!$(".container").hasClass("recruit")) {
       } else {
         const currentPath = location.pathname.split("/").pop();
@@ -93,20 +110,6 @@ $(function () {
         });
       }
     });
-  }
-
-  // ?��sitemap ??nav.html ?�결
-  if (!$(".container").hasClass("recruit")) {
-    loadHTML(
-      "../_include/eng/nav.html",
-      ".popup_wrap.sitemap .popup_contents_wrap nav",
-      trimPopupDepth3Nav
-    );
-  } else {
-    loadHTML(
-      "../_include/eng/nav_recruit.html",
-      ".popup_wrap.sitemap .popup_contents_wrap nav"
-    );
   }
 
   // ?��footer ??nav.html ?�결
