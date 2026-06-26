@@ -4945,7 +4945,7 @@ footer .address em.tel {
   position: relative;
   align-self: flex-start;
 }
-.buy .contents_wrap .contact_area::after {
+/* .buy .contents_wrap .contact_area::after {
   position: absolute;
   content: "";
   bottom: 0;
@@ -4953,7 +4953,7 @@ footer .address em.tel {
   width: 1px;
   height: 58%;
   background-color: #aaa;
-}
+} */
 .buy .contents_wrap .contact_area ul {
   font-size: 18px;
   line-height: 32px;
@@ -8466,9 +8466,9 @@ footer .address em.tel {
     grid-template-columns: 2fr 1fr;
     column-gap: 32px;
   }
-  .buy .contents_wrap .contact_area::after {
+  /* .buy .contents_wrap .contact_area::after {
     left: 63%;
-  }
+  } */
 }
 
 @media (max-width: 576px) {
@@ -9215,12 +9215,12 @@ footer .address em.tel {
   .buy .contents_wrap .contact_area {
     grid-template-columns: initial;
   }
-  .buy .contents_wrap .contact_area::after {
+  /* .buy .contents_wrap .contact_area::after {
     width: 100%;
     height: 1px;
     left: 0;
     bottom: 40%;
-  }
+  } */
   .buy .contents_wrap .contact_area .mid_tit {
     grid-column: initial;
   }
